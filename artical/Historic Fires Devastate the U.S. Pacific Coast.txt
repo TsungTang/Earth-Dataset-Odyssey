@@ -1,0 +1,39 @@
+Climate and fire scientists have long anticipated that fires in the U.S. West would grow larger, more intense, and more dangerous. But even the most experienced among them have been at a loss for words in describing the scope and intensity of the fires burning in West Coast states in September 2020.
+
+Lightning initially triggered many of the fires, but it was unusual and extreme meteorological conditions that turned some of them into the worst conflagrations in the region in decades. Record-breaking air temperatures, periods of unusually dry air, and blasts of fierce winds—on top of serious drought in some areas—led fires to ravage forests and loft vast plumes of smoke to rarely seen heights.
+
+“We had a perfect storm of meteorological factors come together that encouraged extreme burning,” said Vincent Ambrosia, the associate program manager for wildfire research in NASA’s Earth Applied Sciences Program. “That was layered on top of shifting climate patterns—a long term drying and warming of both the air and vegetation—that is contributing to the growing trend we are seeing toward larger, higher-intensity fires in the U.S. West.”
+
+The buildup of fuels may be another relevant factor. Human efforts to extinguish most fires over the past 120 years has led to an increase in old, overgrown forests in the West that burn intensely when they catch fire, explained Ambrosia.
+
+September 7, 2020
+
+The fires have proven devastating for people, property, and landscapes. With more than 3.1 million acres burned as of September 11, 2020, the fires have obliterated California’s record for the number of acres burned in a year. Six of the top 20 largest fires in state history have occurred in 2020, according to Cal Fire. Authorities attributed more than two dozen deaths to the fires; several towns in Oregon and California have been severely damaged; at least 4,000 homes have been destroyed; and hundreds of thousands of people faced evacuation orders.
+
+The view of the fires from space has been unusual and grim. Throughout the outbreak, sensors like the Visible Infrared Imaging Radiometer Suite (VIIRS) and the Ozone Mapping and Profiler Suite (OMPS) on the NOAA-NASA Suomi NPP satellite have collected daily images showing expansive, thick plumes of aerosol particles blowing throughout the U.S. West on a scale that satellites and scientists rarely see.
+
+On multiple days, OMPS measured smoke clouds over the western U.S. with higher aerosol index values than anything Colin Seftor, an atmospheric scientist at NASA’s Goddard Space Flight Center, says he has ever seen in that area with OMPS. For instance, on September 9 (image above), a frontal boundary moved into the Great Basin and produced very high downslope winds along the mountains of Washington, Oregon, and California. The winds whipped up the fires, while a pyrocumulus cloud from the Bear fire in California injected smoke high into the atmosphere. The sum of these events was an extremely think blanket of smoke along the West Coast.
+
+1997 - 2020
+
+A few days earlier, on September 7 (image above), the joint NASA-CNES CALIPSO satellite observed smoke from an explosive pyrocumulus cloud that emerged from the Creek fire in California. The cloud lofted smoke 17 kilometers (10 miles) into the atmosphere, a record for a fire in North America and enough to carry smoke into the stratosphere.
+
+All of that smoke translates into significant carbon emissions. “By our estimates, 2020 is the highest year of fire carbon emissions for California in our Global Fire Emissions Database, which has data for 1997 to the present,” said Douglas Morton, chief of the biospheric sciences laboratory at NASA Goddard. “Fire emissions this year far outpace the annual totals for all other years, and it is only September 11.”
+
+NASA scientists plan to use this unusual event to test and potentially improve models and forecasts of the dispersion of smoke. “The multiple CALIPSO overpasses over California in the past few weeks will provide a unique set of observations to validate retrospective fire plume simulations; they also could make huge difference in near-real-time applications," explained Jean-Paul Vernier, an atmospheric scientist with NASA’s Applied Sciences Disasters program who is based at NASA’s Langley Research Center. “With state-of-the-art satellite observations from CALIPSO, MISR, and MODIS, we are doing everything we can to improve air quality forecasts.”
+
+NASA Earth Observatory images by Joshua Stevens, using Ozone Mapping and Profiler Suite (OMPS) data and VIIRS data from NASA EOSDIS/LANCE and GIBS/Worldview and the Suomi National Polar-orbiting Partnership, CALIPSO data from NASA/CNES, and emissions data from the Global Fire Emissions Database (GFED). Story by Adam Voiland.
+
+
+===
+Satellite data is helping scientists size up one of the most intense outbreaks of fire and smoke that Oregon and California have seen in decades.
+
+Image of the Day for September 12, 2020
+
+Instruments:
+    Aqua — MODIS
+    CALIPSO — CALIOP
+    Suomi NPP — OMPS
+    Suomi NPP — VIIRS
+    Terra — MODIS
+

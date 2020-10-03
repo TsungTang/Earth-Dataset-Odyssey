@@ -1,22 +1,39 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Container from "../views/Container.vue"
+import Unknown from "../views/Unknown.vue"
+import RecommendView from "../views/RecommendView"
+import DataInfo from "../views/DataInfo"
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/earth_dataset_odyssey',
+    name: 'Container',
+    redirect: '/earth-dataset-odyssey/recommend-datasets',
+    component: Container,
+    children: [
+      {
+        name: 'RecommendView',
+        path: 'recommend-datasets',
+        component: RecommendView
+      },
+      {
+        name: 'DataInfo',
+        path: 'data-infomation/:dataId',
+        component: DataInfo
+      }
+    ]
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/',
+    redirect: '/earth_dataset_odyssey/recommend-datasets'
+  },
+  {
+    path: "*",
+    component: Unknown
   }
 ]
 

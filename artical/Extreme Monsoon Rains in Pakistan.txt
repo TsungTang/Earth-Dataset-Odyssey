@@ -1,0 +1,24 @@
+
+A heavy monsoon season has caused fatal flooding across Pakistan in 2020. More than 400 people have died since mid-June; another 400 were injured; and more than 200,000 homes were damaged or destroyed.
+
+The Sindh province in southeastern Pakistan, which received historic amounts of rain, has been the most affected region. The images above show a portion of Sindh on (September 21, 2020) compared to the same time last year (September 21, 2019). The false-color images, acquired by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite, use a combination of infrared and visible light (bands 7-2-1) to make it easier to see the boundary between water and land. Water appears navy blue and black; vegetation is bright green.
+
+Sindh was hit by sporadic heavy rains in July and experienced record-breaking rainfall in August. Karachi, the provincial capital and country’s most populous city, recorded the most August rainfall in 89 years of record keeping. Karachi received around 490 millimeters (19 inches) of rain for the month—more than 200 millimeters occurred within twelve hours. According to news reports, some of the urban flooding was the result of clogged stormwater drains.
+
+The Pakistan Meteorological Department (PMD) reported heavy rains in late August in other parts of the province, affecting the districts of Mīrpur Khās, Hyderabad, Sukkur, and Larkana. The Karachi, Hyderbad, and Mīrpur Khās districts were declared “calamity-affected areas.” More than 2 million people across Sindh Province have been affected by monsoon rains this year, with 68,000 residents displaced in relief camps.
+
+The government also reported that nearly one million acres of crops have also been destroyed by the flooding. Fields of cotton, vegetables, onions, tomatoes, and sugarcane have been affected.
+
+Monsoon season generally lasts from mid-June through September. As of September 24, the PMD reported normal flow along the Indus and several other key rivers in the country.
+
+NASA Earth Observatory images by Lauren Dauphin, using MODIS data from NASA EOSDIS/LANCE and GIBS/Worldview. Story by Kasha Patel.
+
+
+===
+The 2020 rainy season has caused fatal flooding and crop loss across Pakistan.
+
+Image of the Day for September 25, 2020
+
+Instrument:
+    Terra — MODIS
+

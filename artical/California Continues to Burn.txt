@@ -1,0 +1,37 @@
+August 2020 brought a “lightning siege” in California that sparked a rash of wildfires across the state. By early September, nearly 14,000 lightning strikes had ignited 900 fires that have burned more than 1.5 million acres.
+
+More than a quarter million of those acres burned within the August Complex, a fire located northwest of Willows, California, in Mendocino National Forest and adjacent areas. Smoke still streamed from the complex on September 1, when the Operational Land Imager (OLI) on Landsat 8 acquired these images. The first image is natural color and shows smoke blanketing numerous communities in Mendocino County.
+
+The image pair below shows detailed views of the fire’s northern extent, where strong winds on August 31 caused fire activity to pick up. Streaks of red are visible in the natural-color image (left) where aerial crews dropped fire retardant on the terrain to impede the spread of the fire. The right image was made from a combination of shortwave and near-infrared data (bands 7-6-5) to reveal the intensity of fire areas through the clouds. In this image, the hottest and most active parts of the fire front are yellow. The pink halo around the main fire area is caused by the hot gases emitted in the immediate vicinity of the fire front at the lower reaches of the fire plume. Previously burned areas are dark brown.
+
+September 1, 2020
+
+Natural Color - September 1, 2020
+JPEG
+
+SWIR - September 1, 2020
+JPEG
+
+“The fire management community utilizes data like this, as well as other thermal-infrared sensor data on satellites and airborne platforms, to quickly identify fire hot spots for indicating where fires are burning,” said Vince Ambrosia, a CSUMB scientist working at NASA’s Ames Research Center, and associate program manager for wildfires in NASA’s Earth Science Applied Sciences Program. “This allows fire managers to quickly mobilize firefighting resources and personnel, and aids with post-fire burn severity mapping to allow rapid rehabilitation and recovery operations to occur on the most critical ecosystem-affected areas.”
+
+The August Complex was just one of 20 major fires and fire complexes actively burning across California in early September 2020. Less than 100 miles to the south, in Napa and neighboring counties, the LNU Complex had burned 375,209 acres (586 square miles/1,518 square kilometers) by September 2, making it the third-largest wildfire by acreage in state history. Another 100 miles south, the SCU Lightning Complex east of San Jose was the second-largest fire in state history, having burned 391,578 acres (612 square miles/1,585 square kilometers).
+
+“All these events were lightning-caused and burning in remote Mediterranean-ecosystem shrub and forested regions,” Ambrosia said. “The August Complex continues to spread aggressively, while the fire complexes further south have slowed their advancement.”
+
+To date, the fires have destroyed or damaged more than 3,700 structures and have led to seven fatalities, according to Cal Fire. Even people living away from the wildfires have been affected by poor air quality that has reached unhealthy to hazardous levels in places. Smoke has helped drive up particle pollution across California, which was five times higher in late August 2020 compared to the same time in 2019, according to news reports.
+
+“The lightning-caused wildfire events seen in Northern California were the result of the perfect storm,” Ambrosia said, including a large dry-lightning event across the entire area, windy conditions, and lingering drought. The situation was made worse by historic heat that gripped the U.S. West, which caused further drying of drought-stressed vegetation. The heatwave is not over. Forecasters called for air temperatures to climb above 100 degrees Fahrenheit in California’s Central Valley over the Labor Day weekend and into the second week of September.
+
+“Many of the areas that have burned, including the August Complex Fire area, have experienced higher fuel loads due to the absence of periodic fires in those areas,” Ambrosia said, “which combined with the aforementioned variables contributed to more intense wildfire spreading.”
+
+NASA Earth Observatory images by Joshua Stevens, using Landsat data from the U.S. Geological Survey. Story by Kathryn Hansen.
+
+
+===
+By early September 2020, more than a quarter million acres had burned within the August Complex fire in Mendocino National Forest.
+
+Image of the Day for September 4, 2020
+
+Instrument:
+    Landsat 8 — OLI
+

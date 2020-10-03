@@ -1,0 +1,37 @@
+California Continues to Burn
+id: article_0003
+https://earthobservatory.nasa.gov/images/147215/california-continues-to-burn
+
+Extreme Monsoon Rains in Pakistan
+id: article_0006
+https://earthobservatory.nasa.gov/images/147330/extreme-monsoon-rains-in-pakistan
+
+Bobcat Fire Scorches Southern California
+id: article_0002
+https://earthobservatory.nasa.gov/images/147324/bobcat-fire-scorches-southern-california
+
+Record Flooding in Sudan
+id: article_0008
+https://earthobservatory.nasa.gov/images/147288/record-flooding-in-sudan
+
+Historic Fires Devastate the U.S. Pacific Coast
+id: article_0007
+https://earthobservatory.nasa.gov/images/147277/historic-fires-devastate-the-us-pacific-coast
+
+Arctic Sea Ice Reaches Second-Lowest Extent
+id: article_0000
+https://earthobservatory.nasa.gov/images/147306/arctic-sea-ice-reaches-second-lowest-extent
+
+Could COVID-19 Have Seasons? Searching for Signals in Earth Data
+id: article_0004
+https://earthobservatory.nasa.gov/features/covid-seasonality
+
+Explosive Fire Activity in Australia
+id: article_0005
+https://earthobservatory.nasa.gov/images/146125/explosive-fire-activity-in-australia
+
+Australian Smoke Plume Sets Records
+id: article_0001
+https://earthobservatory.nasa.gov/images/146235/australian-smoke-plume-sets-records
+
+

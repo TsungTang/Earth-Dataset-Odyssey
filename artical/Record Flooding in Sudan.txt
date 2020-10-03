@@ -1,0 +1,27 @@
+A wetter-than-usual rainy season has devastated communities across Sudan in 2020, as the Nile River and some of its tributaries reached their highest levels in 100 years.
+
+Widespread flooding has claimed at least 100 lives and damaged or destroyed more than 110,000 homes since mid-July 2020, according to United Nations Office for the Coordination of Humanitarian Affairs (OCHA). The office reported that more people have been affected by flooding in Sudan this year—more than 650,000—than any of the past seven rainy seasons. The Sudanese government declared a three-month national state of emergency on September 4.
+
+The images above show flooding in Sudan’s capital, Khartoum, on September 2, 2020 (right), compared to a more typical rainy season in September 2016 (left). These false-color images, acquired with the Operational Land Imager (OLI) on the Landsat 8 satellite, use a combination of infrared and visible light (bands 6-5-4) to make it easier to see the boundary between water and land. Water appears navy blue and black; clouds are white or cyan; and vegetation is bright green.
+
+Seventeen of Sudan’s eighteen states experienced flooding; Khartoum State was one of the worst hit. Heavy rain caused the White and Blue Nile to breach their banks in the capital city Khartoum and twin city Omdurman. The Sudanese Irrigation Ministry said water levels of the Blue Nile are higher than levels reached during the historic 1988 flood. The floods damaged thousands of homes and buildings and threatened a few UNESCO World Heritage Sites and the national museum of Sudan. The rates of floods and rain this season has exceeded the records set in 1946 and 1988.
+
+August 21, 2020
+JPEG
+
+The image above shows flooding near the Atbarah River (or Black Nile river) around Adarama, about 500 kilometers (310 miles) northeast of Khartoum. The photograph was shot on August 21, 2020, by an astronaut onboard the International Space Station.
+
+The Sudan Minister of Irrigation and Water Resources reported the Nile River, which is fed by several tributaries including the White, Blue, and Black Nile tributaries, crested to a record-breaking level of 17.4 meters (57 feet). Forecasters expect the floods to continue through the end of the rainy season in September 2020.
+
+NASA Earth Observatory images by Lauren Dauphin, using Landsat data from the U.S. Geological Survey. Astronaut photograph ISS063-E-076949 was acquired on August 21, 2020, with a Nikon D5 digital camera using an 800 millimeter lens and is provided by the ISS Crew Earth Observations Facility and the Earth Science and Remote Sensing Unit, Johnson Space Center. The image was taken by a member of the Expedition 63 crew. The image has been cropped and enhanced to improve contrast, and lens artifacts have been removed. The International Space Station Program supports the laboratory as part of the ISS National Lab to help astronauts take pictures of Earth that will be of the greatest value to scientists and the public, and to make those images freely available on the Internet. Additional images taken by astronauts and cosmonauts can be viewed at the NASA/JSC Gateway to Astronaut Photography of Earth. Story by Kasha Patel.
+
+
+===
+A wetter-than-usual rainy season in Sudan has devastated communities across the country.
+
+Image of the Day for September 21, 2020
+
+Instruments:
+    ISS — Digital Camera
+    Landsat 8 — OLI
+

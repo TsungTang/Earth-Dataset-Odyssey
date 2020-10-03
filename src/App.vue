@@ -1,32 +1,45 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-#nav {
-  padding: 30px;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body {
+  font-weight: 300;
+  line-height: 1.6;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+h1 {
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  background-color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.app {
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
 }
 </style>

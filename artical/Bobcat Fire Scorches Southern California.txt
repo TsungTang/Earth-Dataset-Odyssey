@@ -1,0 +1,30 @@
+After burning more than 180 square miles (460 square kilometers) of the San Gabriel Mountains in September 2020, the Bobcat fire now ranks among the largest fires on record for Los Angeles County, California. The blaze began on September 6 near Cogswell Dam, and grew steadily over the next three weeks in the midst of unusually hot, dry conditions.
+
+“Strong winds that have shifted direction several times over the course of the fire helped it spread over such a large area,” explained Natasha Stavros, a wildfire expert with NASA’s Jet Propulsion Laboratory. “And the fire is burning on steep terrain with limited access to roads, which made it challenging to contain.”
+
+Stavros sees the fingerprints of climate change in the Bobcat fire and in California's historic 2020 fire season. “Four of the five largest fires ever recorded in California were burning at the same time as the Bobcat fire,” she said. “Climate change contributes to megafires like these by heating fuels up, drying them out, and making them more flammable.”
+
+Stavros and other NASA fire experts have been monitoring the blazes using a suite of satellite sensors. One of them, the Operational Land Imager (OLI) on the Landsat 8 satellite, acquired an image of the burn scar (above) on September 21, 2020, while the fire was still raging in Angeles National Forest. False color makes it easier to distinguish the burn scar. The image combines shortwave infrared, near-infrared, and green light (OLI bands 7-5-2) to show active fires (bright red), scarred land that has been consumed by the fire (darker red), intact vegetation (green), and cities and infrastructure (gray).
+
+As the fire worked its way through the national forest, it consumed large areas of chaparral, brush, and grass. While flames have mostly stayed clear of populated areas, they veered into parts of the Juniper Hills and Littlerock neighborhoods near Palmdale, leading to more than two dozen homes being destroyed or damaged. Flames also threatened historic Mount Wilson Observatory for several days, but the site appears to have escaped serious damage.
+
+While Landsat and other satellites constantly collect data from space that is useful for monitoring fires, NASA sometimes deploys aircraft for advanced fire management research. In this case, the high-flying ER-2 surveyed the Bobcat fire on September 17, 2020, from a height of 65,000 feet (20,000 meters), about twice as high as commercial airliners fly. The pilot of the aircraft took the photograph of smoke rising from the fire shown above. Meanwhile, the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) sensor on board observed fine details of the fire’s temperature, the water content of vegetation canopies, characteristics of the smoke, and burn severity.
+
+“The ER-2 with AVIRIS was able to image the Bobcat fire on a checkout flight for the NASA Western Diversity Time Series airborne campaign,” said Robert Green, a senior research scientist at NASA’s Jet Propulsion Laboratory and the AVIRIS experiment scientist. “These advanced measurements are supporting development and testing of new algorithms that will be used with the space instruments planned for the next decade.”
+
+“We use airborne ‘missions of opportunity’, like the Bobcat fire flight, to improve our understanding of dynamic fire physics and Earth processes,” added Vincent Ambrosia, the associate program manager for wildfire research in NASA’s Earth Applied Sciences Program. “The agency supports the adaptation and operationalization of unique sensor data derived from NASA Earth Observations, such as AVIRIS, to improve national and international disaster management agencies efforts to understand and mitigate wildfire effects.”
+
+According to InciWeb, the blaze was 50 percent contained as of September 24 thanks to the efforts of more than 1,600 firefighters. While cooler weather and lighter winds helped firefighters slow the spread in recent days, forecasters anticipate that red flag burning conditions could soon return as another heat wave and stronger winds return to southern California in the coming days.
+
+NASA Earth Observatory image by Lauren Dauphin, using Landsat data from the U.S. Geological Survey. Photograph by Tim Williams (NASA Armstrong Flight Research Center). Story by Adam Voiland.
+
+
+===
+The fire is among the largest Los Angeles County has ever faced.
+
+Image of the Day for September 28, 2020
+
+Instruments:
+    Aircraft Sensors — Camera
+    Landsat 8 — OLI
+

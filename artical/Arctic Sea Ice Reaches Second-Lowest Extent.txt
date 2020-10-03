@@ -1,0 +1,30 @@
+Arctic sea ice likely reached its annual minimum extent on September 15, 2020, according to researchers at NASA and the National Snow and Ice Data Center (NSIDC).
+
+Analyses of satellite data showed that the Arctic ice cap shrank to 3.74 million square kilometers (1.44 million square miles), making it the second-lowest minimum on record. Experts cautioned that the announcement is preliminary, and there is still a possibility that changing winds or late season melting could push the ice extent lower.
+
+The map at the top of this page shows the sea ice extent—defined as the total area in which the ice concentration is at least 15 percent—at its 2020 minimum on September 15. The ice extent (white) on that day was far lower than the 1981-2010 average extent for the same day (yellow line). 2020 and 2012 remain the only years when sea ice extent has fallen below 4.0 million square kilometers (1.54 million square miles).
+
+“The minimum this year is the unsurprising result of a continued long-term decline in Arctic sea ice,” said Alek Petty, a sea ice scientist NASA’s Goddard Space Flight Center. The lowest 14 ice extents on record have all occurred in the past 14 years.
+
+September 15, 2020
+
+Numerous factors combined to shrink sea ice so much in 2020. In spring, a heatwave across Siberia set the stage for rapid early season melting. Also, sea ice was already much thinner going into the 2020 melt season than in years past—the accumulated result of the general long-term decline in summer sea ice extent. And scientists think warm water could be working its way under the ice and melting it from below.
+
+Weather can also affect the amount of ice across the Arctic. From late July into early August, scientists watched an atmospheric low-pressure system spin over the Arctic Ocean and wondered how it would affect the ice. A similar storm in 2012 was a major cause of the lowest sea ice minimum on record. “The summer 2020 storm definitely had an effect, but it didn’t seem sufficient to cause the really significant loss of ice to drive a new record low,” Petty said.
+
+In any given year, there are regional variations in air temperatures, water temperatures, and weather that promote or inhibit melting in different parts of the Arctic. By the date of the 2020 minimum, there was still more sea ice remaining in the Beaufort Sea compared to 2012, and slightly less in the Laptev and East Greenland seas.
+
+NASA Earth Observatory images by Joshua Stevens, using data from the National Snow and Ice Data Center. Story by Kathryn Hansen, and includes reporting by Kate Ramsayer.
+
+
+
+===
+The Arctic sea ice extent continues its long-term downward trend.
+
+Image of the Day for September 23, 2020
+
+Instruments:
+    DMSP — SSM/I
+    DMSP — SSMIS
+    Nimbus 7 — SMMR
+

@@ -1,0 +1,21 @@
+input[type="text"]:focus{
+  outline: none;
+}
+/* 
+::placeholder{
+  color: #3B4256;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+:-ms-input-placeholder { 
+  color: #3B4256;
+  font-weight: 500;
+  font-size: 18px;}
+
+::-ms-input-placeholder { 
+  color: #3B4256;
+  font-weight: 500;
+  font-size: 18px;}
+
+ */
