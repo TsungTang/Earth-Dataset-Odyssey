@@ -24,7 +24,7 @@
                 {{ cutLongString(disaster.des) }}
               </div>
               <span
-                @click.self.stop.prevent="searchRelatedData(disaster)"
+                @click.self.stop.prevent="disasterRelatedData(disaster)"
                 class="text-lightgreen p-3 text-2xl font-medium"
                 >{{
                   "Showing related datasets (" +
@@ -128,7 +128,7 @@ Widespread flooding has claimed at least 100 lives and damaged or destroyed more
     toDisasterPage(url) {
       window.open(url)
     },
-    searchRelatedData(disaster) {
+    disasterRelatedData(disaster) {
       this.disasterObj = disaster
       this.disasterObj.time = new Date().format("yyyy-MM-dd hh:mm:ss")
       this.disasterObj.from = "disaster"
@@ -141,9 +141,13 @@ Widespread flooding has claimed at least 100 lives and damaged or destroyed more
       this.showRelatedDataset = false
     },
     updateBlogRecode() {
-      this.$store.dispatch("push_new_recode", "blog", {
+      const newRecodeObj = {
         id: this.disasterObj.id,
         time: new Date().format("yyyy-MM-dd hh:mm:ss"),
+      }
+      this.$store.dispatch("push_new_recode", {
+        recodeType: "blog",
+        newRecodeObj,
       })
     },
   },

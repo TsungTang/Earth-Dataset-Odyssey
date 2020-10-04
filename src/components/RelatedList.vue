@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="related_container"
     class="related-container min-h-15vh max-h-80vh overflow-y-auto w-full py-8 px-16 shadow-card bg-white rounded-1rem"
   >
     <div
@@ -40,12 +41,13 @@
         v-for="(eachdata, index) in relatedList"
         :key="eachdata.id + '_' + index"
       >
-        <img
-          :src="baseImageURL + eachdata.id + '?h=200&w=300'"
-          alt=""
-          width="120"
-          class="mr-6"
-        />
+        <div class="mr-10">
+          <img
+            :src="baseImageURL + eachdata.id + '?h=200&w=300'"
+            alt=""
+            width="120"
+          />
+        </div>
         <div class="w-full">
           <h3 class="mb-6 text-3xl font-bold">
             {{ eachdata.title }}
@@ -119,52 +121,53 @@ export default {
     }),
   },
   watch: {
-    // user_recode: {
-    //   handler() {
-    //     if (this.tpye === "disasterToData") return
-    //     this.$store
-    //       .dispatch("recommend_api", {
-    //         type: this.type,
-    //         data: this.user_recode,
-    //       })
-    //       .then(() => {
-    //         this.relatedList = this.$store.getters.get_responseData(this.type)
-    //       })
-    //   },
-    //   deep: true,
-    // },
+    user_recode: {
+      handler() {
+        // if (this.tpye === "datainfoToData") return
+        this.get_related_data()
+      },
+      deep: true,
+    },
   },
   mounted() {
-    let inputData
-    if (this.inputObj) {
-      const picked = (({ id, time }) => ({ id, time }))(this.inputObj)
-
-      inputData = JSON.parse(JSON.stringify(this.recommend_api_base_data))
-      inputData.blog.push(picked)
-    } else {
-      inputData = { ...this.user_recode }
-    }
-    this.$store
-      .dispatch("recommend_api", {
-        // recodeType: this.type,
-        data: inputData,
-      })
-      .then((res) => {
-        // console.log("related-----------------", res)
-        this.relatedList = res.data
-      })
+    this.get_related_data()
   },
   methods: {
+    get_related_data() {
+      let inputData
+      if (this.inputObj) {
+        const picked = (({ id, time }) => ({ id, time }))(this.inputObj)
+
+        inputData = JSON.parse(JSON.stringify(this.recommend_api_base_data))
+        inputData.blog.push(picked)
+      } else {
+        inputData = { ...this.user_recode }
+      }
+      this.$store
+        .dispatch("recommend_api", {
+          data: inputData,
+        })
+        .then((res) => {
+          // console.log("related-----------------", res)
+          this.relatedList = res.data
+        })
+    },
     emitHideRelatedEvent() {
       this.$emit("hideRelatedDataList")
     },
     toDataPage(dataset_id) {
-      this.$router.push({ name: "DataInfo", params: { dataId: dataset_id } })
+      if (this.$route.name !== "DataInfo")
+        this.$router.push({ name: "DataInfo", params: { dataId: dataset_id } })
       this.$store.dispatch(
         "set_dataDetailInfo",
         this.relatedList.find((el) => el.id === dataset_id)
       )
       this.pushNewRecode_view(dataset_id)
+
+      setTimeout(() => {
+        this.$refs.related_container.scrollTop = 0
+        window.scrollTo(0, 0)
+      }, 300)
     },
     pushNewRecode_view(dataset_id) {
       const newRecodeObj = {

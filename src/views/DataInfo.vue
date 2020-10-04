@@ -1,33 +1,38 @@
 <template>
   <div class="datainfo-container">
-    <header class="header-bg w-full">
+    <header class="header-bg py-10 w-full">
       <div
         v-if="Object.keys(dataDetailInfo).length > 0"
-        class="top-card flex items-center mx-auto py-8 w-4/5 text-white font-normal"
+        class="top-card mx-auto py-8 w-4/5 text-white font-normal"
       >
-        <a
-          :href="dataDetailInfo.links[0].rel"
-          target="_blank"
-          class="source-link"
-        >
-          <img
-            src="../assets/image/nasalogo_black.png"
-            alt="NASA"
-            width="50"
-            height="40"
-          />
-        </a>
-        <div class="text-2xl ml-6 leading-12">Welcome to NASA</div>
+        <router-link class="flex items-center" :to="{ name: 'RecommendView' }">
+          <div
+            :href="dataDetailInfo.links[0].rel"
+            target="_blank"
+            class="source-link"
+          >
+            <img
+              src="../assets/image/nasalogo_black.png"
+              alt="NASA"
+              width="50"
+              height="40"
+            />
+          </div>
+          <div class="text-2xl ml-6 leading-12">
+            Welcome to Earth Dataset Odyssey
+          </div>
+        </router-link>
       </div>
     </header>
     <div class="main-info-container w-4/5 mx-auto">
-      <router-link :to="{ name: 'RecommendView' }">
+      <!-- <router-link :to="{ name: 'RecommendView' }"> -->
+      <div @click="$router.go(-1)" class="cursor-pointer">
         <h3 class="flex items-center mt-16 text-24R font-bold">
           <i class="fa fa-chevron-left text-base mr-6" aria-hidden="true"></i
-          >Back to Search Results of
-          <span class="ml-4 text-lightgreen">test text</span>
+          >Back to Previous Page
         </h3>
-      </router-link>
+      </div>
+      <!-- </router-link> -->
       <div class="flex w-full mt-6">
         <div class="mr-10 rounded-1rem">
           <img
@@ -49,7 +54,7 @@
               </colgroup>
               <tr class=" ">
                 <td>Summary</td>
-                <td class="text-2xl font-normal">
+                <td class="text-2xl font-normal break-normal text-justify">
                   {{ dataDetailInfo.cmr.summary }}
                 </td>
               </tr>
@@ -192,6 +197,8 @@ export default {
     if (Object.keys(this.dataDetailInfo).length === 0) {
       this.$router.push({ name: "RecommendView" })
     }
+
+    window.scrollTo(0, 0)
     // const newRecodeObj = {
     //   id: this.dataDetailInfo.id,
     //   time: new Date().format("yyyy-MM-dd hh:mm:ss"),

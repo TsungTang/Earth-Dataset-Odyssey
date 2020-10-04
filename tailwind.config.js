@@ -43,16 +43,21 @@ module.exports = {
       '8xl': '6rem',
       '9xl': '7rem'
     },
+    height: theme => ({
+      "screen/2": "50vh",
+      "screen/3": "calc(100vh / 3)",
+      "screen/4": "calc(100vh / 4)",
+      "screen/5": "calc(100vh / 5)",
+    }),
     backgroundColor: theme => ({
       ...theme('colors'),
       'deepblue': '#213C53',
-      'lightgreen': "#79C65F"
+      'lightgreen': "#43BA1A"
     }),
     textColor: theme => ({
       ...theme('colors'),
       'deepblue': '#213C53',
-      'lightgreen': "#79C65F"
-
+      'lightgreen': "#43BA1A"
     }),
     screens: {
       'sm': '640px',
@@ -84,6 +89,7 @@ module.exports = {
     },
     borderRadius: {
       '1rem': '1rem',
+      '2rem': '2rem',
       'sm': '0.125rem',
       default: '0.25rem',
       'md': '0.375rem',

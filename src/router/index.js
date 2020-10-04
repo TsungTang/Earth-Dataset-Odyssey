@@ -4,21 +4,27 @@ import Container from "../views/Container.vue"
 import Unknown from "../views/Unknown.vue"
 import RecommendView from "../views/RecommendView"
 import DataInfo from "../views/DataInfo"
+import SearchResult from "../views/SearchResult"
 
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/earth_dataset_odyssey',
+    path: '/edo',
     name: 'Container',
-    redirect: '/earth-dataset-odyssey/recommend-datasets',
+    redirect: '/edo/recommend-datasets',
     component: Container,
     children: [
       {
         name: 'RecommendView',
         path: 'recommend-datasets',
         component: RecommendView
+      },
+      {
+        name: "SearchResult",
+        path: 'search-result',
+        component: SearchResult
       },
       {
         name: 'DataInfo',
@@ -29,7 +35,7 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/earth_dataset_odyssey/recommend-datasets'
+    redirect: '/edo/recommend-datasets'
   },
   {
     path: "*",

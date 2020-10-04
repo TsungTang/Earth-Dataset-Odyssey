@@ -70,21 +70,20 @@ const dataset = {
       "blog": []
 
     },
-    disasterToData: [],
-    datainfoToData: [],
-    dataToData: [],
-    keywordToData: [],
+    searchKeyWord: '',
+    // disasterToData: [],
+    // datainfoToData: [],
+    // dataToData: [],
+    // keywordToData: [],
     dataDetailInfo: {}
   },
   getters: {
     get_user_recode: (state) => {
-      if (localStorage.getItem('user_recode')) {
-        return localStorage.getItem('user_recode')
-      } else {
-        return state.user_recode
-
-      }
-
+      // if (localStorage.getItem('user_recode') !== null) {
+      //   return JSON.parse(localStorage.getItem('user_recode'))
+      // } else {
+      return state.user_recode
+      // }
     },
     get_dataDetailInfo: (state) => {
       return state.dataDetailInfo
@@ -94,6 +93,9 @@ const dataset = {
     },
     get_recommend_api_base_data: (state) => {
       return state.recommend_api_base_data
+    },
+    get_searchKeyWord: (state) => {
+      return state.searchKeyWord
     }
   },
   actions: {
@@ -108,7 +110,7 @@ const dataset = {
 
         // init input data
         let inputData
-        if (state.firstRecommend || localStorage.getItem('firstRecommend')) {
+        if (state.firstRecommend) {
           inputData = init_recode()
         } else {
           inputData = data
@@ -133,6 +135,31 @@ const dataset = {
         commit('push_new_recode', { recodeType, newRecodeObj })
         resolve()
       })
+    },
+    set_searchKeyword({ commit }, keyword) {
+      commit('set_searchKeyword', keyword.toLowerCase())
+    },
+    search_api({ state }) {
+      return new Promise((resolve, reject) => {
+        axios.post("http://localhost:5566/api/search", {
+          mode: 'B', keyword: state.searchKeyWord
+        }).then(res => {
+          if (typeof res.data !== 'string' && res.data.data.length === 0) {
+            throw new Error('empty datalist')
+          }
+          let returnData = res.data.replace('}, ]', '}]')
+
+          returnData = JSON.parse(returnData)
+          resolve(returnData.data)
+        }
+        )
+          .catch(err => {
+            console.error(err)
+            reject()
+          })
+
+      })
+
     }
   },
   mutations: {
@@ -151,7 +178,10 @@ const dataset = {
       const newUserRecode = JSON.parse(JSON.stringify(state.user_recode))
       newUserRecode[recodeType].push(newRecodeObj)
       state.user_recode = newUserRecode
-      localStorage.setItem('user_recode', state.user_recode)
+      localStorage.setItem('user_recode', JSON.stringify(state.user_recode))
+    },
+    set_searchKeyword(state, keyword) {
+      state.searchKeyWord = keyword
     }
   }
 }
