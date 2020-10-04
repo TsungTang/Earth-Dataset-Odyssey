@@ -3,7 +3,7 @@
 
 ## Demo
 
-https://drive.google.com/file/d/1x_qeUf2P5QO055tw9f1-H-UKFrqMpy1f/view?usp=sharing
+[demo video](https://drive.google.com/file/d/1x_qeUf2P5QO055tw9f1-H-UKFrqMpy1f/view?usp=sharing)
 
 ![](https://i.imgur.com/zPWMUlP.jpg)
 
