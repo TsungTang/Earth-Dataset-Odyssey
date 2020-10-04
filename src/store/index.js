@@ -71,19 +71,11 @@ const dataset = {
 
     },
     searchKeyWord: '',
-    // disasterToData: [],
-    // datainfoToData: [],
-    // dataToData: [],
-    // keywordToData: [],
     dataDetailInfo: {}
   },
   getters: {
     get_user_recode: (state) => {
-      // if (localStorage.getItem('user_recode') !== null) {
-      //   return JSON.parse(localStorage.getItem('user_recode'))
-      // } else {
       return state.user_recode
-      // }
     },
     get_dataDetailInfo: (state) => {
       return state.dataDetailInfo
@@ -104,9 +96,6 @@ const dataset = {
     },
     recommend_api({ state }, { data }) {
       return new Promise((resolve, reject) => {
-        // if (!localStorage.getItem('user_recode') === null) {
-        //   state.user_recode = localStorage.getItem('user_recode')
-        // }
 
         // init input data
         let inputData
@@ -166,14 +155,6 @@ const dataset = {
     set_dataDetailInfo(state, dataInfoObj) {
       state.dataDetailInfo = dataInfoObj
     },
-    // recommend_api(state, { response_data, type }) {
-    //   // axios 解析 json失敗 手動解析
-    //   // console.log(response_data)
-    //   let returnData = response_data.replace('}, ]', '}]')
-    //   returnData = JSON.parse(returnData)
-    //   state[type] = returnData.data
-    //   state.firstRecommend = false
-    // },
     push_new_recode(state, { recodeType, newRecodeObj }) {
       const newUserRecode = JSON.parse(JSON.stringify(state.user_recode))
       newUserRecode[recodeType].push(newRecodeObj)
