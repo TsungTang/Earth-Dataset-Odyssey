@@ -29,9 +29,21 @@ https://github.com/bonzoyang/buyitcrashit
 ```
 git clone git@github.com:bonzoyang/buyitcrashit.git
 cd ./buyitcrashit/docker
+```
+
+### download pkl file
+
+https://drive.google.com/file/d/1zHPRxMaDGDYh_RH3I2h7LIonDi26mNvq/view?fbclid=IwAR1vw69yeCJqGgYH0JBYwH3oJSt0_c9mZ_oSaZXroAPKUl1W8m3lUDsyOqA
+
+請將下載後的pkl檔放入 `./buyitcrashit/docker/rmd` 資料夾
+
+
+### docker
+```
 docker-compose build
 docker-compose up 
 ```
+
 
 backend server will run on localhost:8000
 
