@@ -91,3 +91,5 @@ cd ./proxy-server
 npm install
 node index.js
 ```
+
+proxy server [http://localhost:5566/#/edo/recommend-datasets](http://localhost:5566/#/edo/recommend-datasets)
