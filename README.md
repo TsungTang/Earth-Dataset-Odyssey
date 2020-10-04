@@ -1,4 +1,4 @@
-# earth_data_ui
+# Earth Dataset Odyssey 
 
 ## Project setup
 ```
