@@ -19,7 +19,7 @@
 
 ![](https://i.imgur.com/jeto19Y.png)
 
-
+<!--
 ## Related Backend Repo
 
 https://github.com/bonzoyang/buyitcrashit
@@ -37,7 +37,7 @@ https://drive.google.com/file/d/1zHPRxMaDGDYh_RH3I2h7LIonDi26mNvq/view?fbclid=Iw
 
 請將下載後的pkl檔放入 `./buyitcrashit/docker/rcmd` 資料夾
 
-
+!-->
 ### docker
 ```
 docker-compose build
