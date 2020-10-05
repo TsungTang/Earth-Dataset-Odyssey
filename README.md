@@ -1,5 +1,7 @@
 # Earth Dataset Odyssey
 
+node version v10.17.0
+6.11.3
 
 ## Demo
 
