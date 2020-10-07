@@ -1,5 +1,8 @@
 # Earth Dataset Odyssey
 
+node version v10.17.0
+
+npm version 6.11.3
 
 ## Demo
 
@@ -19,7 +22,7 @@
 
 ![](https://i.imgur.com/jeto19Y.png)
 
-
+<!--
 ## Related Backend Repo
 
 https://github.com/bonzoyang/buyitcrashit
@@ -35,9 +38,9 @@ cd ./buyitcrashit/docker
 
 https://drive.google.com/file/d/1zHPRxMaDGDYh_RH3I2h7LIonDi26mNvq/view?fbclid=IwAR1vw69yeCJqGgYH0JBYwH3oJSt0_c9mZ_oSaZXroAPKUl1W8m3lUDsyOqA
 
-請將下載後的pkl檔放入 `./buyitcrashit/docker/rmd` 資料夾
+請將下載後的pkl檔放入 `./buyitcrashit/docker/rcmd` 資料夾
 
-
+!-->
 ### docker
 ```
 docker-compose build
@@ -63,24 +66,6 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 ## Proxy server
 
