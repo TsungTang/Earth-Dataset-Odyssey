@@ -76,6 +76,30 @@
           </div>
         </div>
       </div>
+      <date-range-picker
+        class="z-10"
+        ref="picker"
+        :locale-data="{ firstDay: 1, format: 'YYYY-MM-DD' }"
+        :maxDate="maxDate"
+        :timePicker="false"
+        v-model="dateRange"
+        @update="updateValues"
+        @toggle="checkOpen"
+        :autoApply="true"
+        :dateFormat="dateFormat"
+        :showDropdowns="true"
+        :linked-calendars="false"
+        :ranges="false"
+      >
+        <template slot="input" slot-scope="picker" style="min-width: 850px">
+          {{ picker.startDate.format("yyyy-MM-dd") }} -
+          {{ picker.endDate.format("yyyy-MM-dd") }}
+        </template>
+      </date-range-picker>
+      <!-- <date-range-picker
+        v-model="dateRange"
+        :date-format="dateFormat"
+      ></date-range-picker> -->
     </div>
     <div v-else-if="'search-result'" class="search-header w-full">
       <header class="header-bg py-10 w-full">
@@ -134,11 +158,20 @@
 </template>
 
 <script>
+import DateRangePicker from "vue2-daterange-picker"
+import "vue2-daterange-picker/dist/vue2-daterange-picker.css"
+import Date from "@/modules/DateFormat.js"
+
 import { mapGetters } from "vuex"
 export default {
   name: "Header",
+  components: {
+    DateRangePicker,
+  },
   data() {
+    const init_date = this.initDatePickerData()
     return {
+      ...init_date,
       searchText: "",
       defaultKeyWordList: [
         "EARTH SCIENCE",
@@ -156,6 +189,44 @@ export default {
     },
   },
   methods: {
+    initDatePickerData() {
+      return {
+        maxDate: new Date(),
+        dateRange: { startDate: "1990-01-01", endDate: "2020-10-05" },
+        picker: { startDate: "2019-10-01", endDate: "2020-10-01" },
+        // daysOfWeek: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        // monthNames: [
+        //   "Jan",
+        //   "Feb",
+        //   "Mar",
+        //   "Apr",
+        //   "May",
+        //   "Jun",
+        //   "Jul",
+        //   "Aug",
+        //   "Sep",
+        //   "Oct",
+        //   "Nov",
+        //   "Dec",
+        // ],
+        weekLabel: "W",
+
+        firstDay: 0,
+        opens: "center",
+      }
+    },
+    dateFormat(classes, date) {
+      if (!classes.disabled) {
+        classes.disabled = date.getTime() < new Date()
+      }
+      // return classes
+    },
+    updateValues() {
+      console.log("update")
+    },
+    checkOpen() {
+      console.log("toggle")
+    },
     searchDataset() {
       console.log("start search ", this.searchText)
       if (this.$route.name !== "SearchResult")
@@ -172,6 +243,18 @@ export default {
 <style lang="scss">
 @import url("../assets/styles/_base.css");
 @import url("../assets/styles/_input.css");
+// @import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+
+// :v-deep .daterangepicker {
+//   width: 1200px;
+// }
+
+::v-deep monthselect {
+  width: 30%;
+}
+::v-deep yearselect {
+  text-align: center;
+}
 
 .header-bg {
   background-image: url("../assets/image/headerCover.png");

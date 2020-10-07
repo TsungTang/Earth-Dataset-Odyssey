@@ -52,6 +52,7 @@
 <script>
 import { mapGetters } from "vuex"
 import RelatedList from "@/components/RelatedList"
+
 export default {
   name: "RecommendView",
   components: {

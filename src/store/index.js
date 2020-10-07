@@ -104,7 +104,7 @@ const dataset = {
         } else {
           inputData = data
         }
-        axios.post("http://localhost:5566/api/recommend", inputData).then((res) => {
+        axios.post("/api/recommend", inputData).then((res) => {
           let returnData = res.data.replace('}, ]', '}]')
 
           returnData = JSON.parse(returnData)
@@ -130,7 +130,7 @@ const dataset = {
     },
     search_api({ state }) {
       return new Promise((resolve, reject) => {
-        axios.post("http://localhost:5566/api/search", {
+        axios.post("/api/search", {
           mode: 'B', keyword: state.searchKeyWord
         }).then(res => {
           if (typeof res.data !== 'string' && res.data.data.length === 0) {
