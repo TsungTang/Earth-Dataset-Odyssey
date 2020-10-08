@@ -26,6 +26,7 @@ module.exports = {
       '9xl': '7rem'
     },
     height: theme => ({
+      "screen": "100vh",
       "screen/2": "50vh",
       "screen/3": "calc(100vh / 3)",
       "screen/4": "calc(100vh / 4)",
@@ -35,6 +36,11 @@ module.exports = {
       ...theme('colors'),
       'deepblue': '#213C53',
       'lightgreen': "#43BA1A"
+    }),
+    borderColor: theme => ({
+      ...theme('colors'),
+      default: theme('colors.gray.300', 'currentColor'),
+      'm-grapy': '#CFD0D2',
     }),
     textColor: theme => ({
       ...theme('colors'),
@@ -84,6 +90,7 @@ module.exports = {
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
+      '290px': "290px",
       'full': '100%',
       '30vw': '30vw',
       '50vw': '50vw',
