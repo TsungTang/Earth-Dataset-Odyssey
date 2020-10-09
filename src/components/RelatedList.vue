@@ -1,8 +1,14 @@
 <template>
   <div
     ref="related_container"
-    class="related-container min-h-15vh max-h-80vh overflow-y-auto w-full py-8 px-16 shadow-card bg-white rounded-1rem"
+    class="related-container min-h-15vh max-h-80vh overflow-y-auto w-full py-8 px-16 shadow-card bg-white rounded-1rem mb-20"
   >
+    <citation-popup
+      class="fixed"
+      v-if="showCitation"
+      :citationObj="citationObj"
+      @close-citation-comp="closeCitationComp"
+    />
     <div
       v-if="type && type === 'disasterToData'"
       class="header flex justify-between items-center"
@@ -36,7 +42,7 @@
     </div>
     <div class="main flex flex-col w-full">
       <div
-        class="flex my-10 cursor-pointer"
+        class="flex my-10 cursor-pointer p-3 hover:bg-lightgreen2 rounded-2rem"
         @click="toDataPage(eachdata.id)"
         v-for="(eachdata, index) in relatedList"
         :key="eachdata.id + '_' + index"
@@ -71,6 +77,36 @@
                 </td>
               </tr>
               <tr class="leading-12">
+                <td>Citations</td>
+                <td class="text-2xl font-normal">
+                  {{ eachdata.citation.length }}
+                  <i
+                    @click.stop="showCitationPopup(eachdata)"
+                    v-show="eachdata.citation.length > 0"
+                    class="fa fa-external-link-square z-10 cursor-pointer"
+                    aria-hidden="true"
+                  ></i>
+                </td>
+              </tr>
+              <tr class="leading-12">
+                <td>Instrument</td>
+                <td class="text-2xl font-normal">
+                  {{ eachdata.cmr.Instrument }}
+                </td>
+              </tr>
+              <tr class="leading-12">
+                <td>Version</td>
+                <td class="text-2xl font-normal">
+                  {{ eachdata.version_id }}
+                </td>
+              </tr>
+              <tr class="leading-12">
+                <td>Updated</td>
+                <td class="text-2xl font-normal">
+                  {{ data_format(eachdata.updated) }}
+                </td>
+              </tr>
+              <tr class="leading-12">
                 <td>Totla of Votes</td>
                 <td class="flex text-2xl font-normal">
                   <div class="mr-8">
@@ -98,6 +134,7 @@
 
 import { mapGetters } from "vuex"
 import Date from "@/modules/DateFormat.js"
+import CitationPopup from "@/components/CitationPopup"
 export default {
   props: {
     inputObj: {
@@ -108,9 +145,14 @@ export default {
       default: "dataToData",
     },
   },
+  components: {
+    CitationPopup,
+  },
   data() {
     return {
       relatedList: [],
+      citationObj: {},
+      showCitation: false,
     }
   },
   computed: {
@@ -178,6 +220,19 @@ export default {
         recodeType: "view",
         newRecodeObj,
       })
+    },
+    data_format(raw_date, to_day = false) {
+      if (to_day) return new Date(raw_date).format("yyyy-MM-dd")
+      return new Date(raw_date).format("yyyy-MM-dd hh:mm:ss")
+    },
+    showCitationPopup(dataInfo) {
+      this.citationObj.citation = dataInfo.citation
+      this.citationObj.title = dataInfo.title
+      this.showCitation = true
+    },
+    closeCitationComp() {
+      this.showCitation = false
+      this.citationObj = {}
     },
   },
 }

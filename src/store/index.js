@@ -30,6 +30,13 @@ const init_recode = () => {
   }
 }
 
+// const init_search_recode = () => {
+//   return {
+//     searchKeyWord: '',
+//     searchTime: { start: '', end: '' }
+//   }
+// }
+
 const link = {
   namespced: true,
   state: {
@@ -71,6 +78,7 @@ const dataset = {
 
     },
     searchKeyWord: '',
+    searchTime: { start: '', end: '' },
     dataDetailInfo: {}
   },
   getters: {
@@ -105,9 +113,11 @@ const dataset = {
           inputData = data
         }
         axios.post("/api/recommend", inputData).then((res) => {
-          let returnData = res.data.replace('}, ]', '}]')
 
-          returnData = JSON.parse(returnData)
+          // let returnData = res.data.replace('}, ]', '}]')
+
+          // returnData = JSON.parse(returnData)
+          const returnData = res.data
           state.firstRecommend = false
           localStorage.setItem('firstRecommend', false)
 
@@ -125,25 +135,30 @@ const dataset = {
         resolve()
       })
     },
-    set_searchKeyword({ commit }, keyword) {
-      commit('set_searchKeyword', keyword.toLowerCase())
+    set_searchKeyword({ commit }, { searchText, searchTime }) {
+      commit('set_searchKeyword', { searchText: searchText.toLowerCase(), searchTime })
     },
     search_api({ state }) {
       return new Promise((resolve, reject) => {
         axios.post("/api/search", {
-          mode: 'B', keyword: state.searchKeyWord
+          mode: 'B',
+          keyword: state.searchKeyWord,
+          start_time: state.searchTime.start,
+          end_time: state.searchTime.end
         }).then(res => {
           if (typeof res.data !== 'string' && res.data.data.length === 0) {
             throw new Error('empty datalist')
           }
-          let returnData = res.data.replace('}, ]', '}]')
+          const returnData = res.data
 
-          returnData = JSON.parse(returnData)
+          // state.searchTime = init_search_recode()[1]
           resolve(returnData.data)
         }
         )
           .catch(err => {
             console.error(err)
+            // state.searchTime = init_search_recode()[1]
+
             reject()
           })
 
@@ -161,8 +176,10 @@ const dataset = {
       state.user_recode = newUserRecode
       localStorage.setItem('user_recode', JSON.stringify(state.user_recode))
     },
-    set_searchKeyword(state, keyword) {
-      state.searchKeyWord = keyword
+    set_searchKeyword(state, { searchText, searchTime }) {
+      state.searchKeyWord = searchText
+      state.searchTime.start = searchTime[0]
+      state.searchTime.end = searchTime[1]
     }
   }
 }

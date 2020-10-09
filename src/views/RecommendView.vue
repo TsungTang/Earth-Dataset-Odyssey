@@ -1,5 +1,5 @@
 <template>
-  <div class="datalist-container w-full h-full mt-8">
+  <div class="datalist-container w-full h-full mb-40">
     <div class="w-4/5 mx-auto">
       <div class="disasters-container w-full">
         <h2 class="subtitle text-4xl font-bold">
@@ -8,7 +8,7 @@
         </h2>
         <div class="disaster-card flex">
           <a
-            class="disaster-subcard bg-white shadow-card rounded-lg"
+            class="disaster-subcard flex flex-col bg-white shadow-card rounded-lg"
             :class="{ 'mr-8': index !== 3 }"
             v-for="(disaster, index) in disasterData"
             :key="index + disaster.title"
@@ -16,12 +16,14 @@
             @click="toDisasterPage(disaster.url)"
           >
             <img class="rounded-t-lg" :src="disaster.img" alt="" height="122" />
-            <div class="flex flex-col p-4">
-              <h3 class="mt-3 text-4xl font-bold">{{ disaster.title }}</h3>
-              <div
-                class="descriptive text-2xl font-inter break-normal text-justify"
-              >
-                {{ cutLongString(disaster.des) }}
+            <div class="flex flex-col justify-between p-4">
+              <div>
+                <h3 class="mt-3 text-4xl font-bold">{{ disaster.title }}</h3>
+                <div
+                  class="descriptive text-2xl font-inter break-normal text-justify"
+                >
+                  {{ cutLongString(disaster.des) }}
+                </div>
               </div>
               <span
                 @click.self.stop.prevent="disasterRelatedData(disaster)"

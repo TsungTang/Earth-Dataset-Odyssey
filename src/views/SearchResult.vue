@@ -1,7 +1,13 @@
 <template>
   <div>
+    <citation-popup
+      class="fixed"
+      v-if="showCitation"
+      :citationObj="citationObj"
+      @close-citation-comp="closeCitationComp"
+    />
     <!-- empty result -->
-    <div v-if="emptyRes" class="w-full">
+    <div v-if="emptyRes" class="w-full mb-40">
       <div class="wrap w-full">
         <div
           class="header flex justify-between items-center w-4/5 mb-6 mx-auto"
@@ -26,7 +32,7 @@
       </div>
     </div>
     <!-- main result -->
-    <div v-else class="main flex flex-col mx-auto w-4/5">
+    <div v-else class="main flex flex-col mx-auto w-4/5 mb-40">
       <div class="header flex justify-between items-center">
         <a href="javascript:void(0);" class="text-24R font-bold">
           Datasets of
@@ -36,7 +42,7 @@
         </a>
       </div>
       <div
-        class="flex my-10 cursor-pointer"
+        class="flex my-10 cursor-pointer hover:bg-lightgreen2 p-6 rounded-2rem duration-100"
         @click="toDataPage(eachdata.id)"
         v-for="(eachdata, index) in relatedDataList"
         :key="eachdata.id + '_' + index"
@@ -86,6 +92,18 @@
                   {{ eachdata.granule_count }}
                 </td>
               </tr>
+              <tr class="leading-12">
+                <td>Citation</td>
+                <td class="text-2xl font-normal">
+                  {{ eachdata.citation.length }}
+                  <i
+                    @click.stop="showCitationPopup(eachdata)"
+                    v-show="eachdata.citation.length !== 0"
+                    class="fa fa-external-link-square z-10 cursor-pointer"
+                    aria-hidden="true"
+                  ></i>
+                </td>
+              </tr>
               <tr class="">
                 <td>URL</td>
                 <td class="text-2xl font-normal">
@@ -99,7 +117,7 @@
               </tr>
               <tr class="leading-12">
                 <td>Totla of Votes</td>
-                <td class="flex text-2xl font-normal">
+                <td class="flex items-center mt-2 text-2xl font-normal">
                   <div class="mr-8">
                     <span class="text-lightgreen mr-2">4</span>Researches
                   </div>
@@ -122,9 +140,13 @@
 
 <script>
 import { mapGetters } from "vuex"
+import CitationPopup from "@/components/CitationPopup"
 
 export default {
   name: "SearchResult",
+  components: {
+    CitationPopup,
+  },
   computed: {
     ...mapGetters({
       searchKeyWord: "get_searchKeyWord",
@@ -136,6 +158,8 @@ export default {
     return {
       relatedDataList: [],
       emptyRes: false,
+      showCitation: false,
+      citationObj: {},
     }
   },
   watch: {
@@ -178,6 +202,7 @@ export default {
       window.scrollTo(0, 0)
     },
     data_format(raw_date, to_day = false) {
+      if (!raw_date) return "Now"
       if (to_day) return new Date(raw_date).format("yyyy-MM-dd")
       return new Date(raw_date).format("yyyy-MM-dd hh:mm:ss")
     },
@@ -190,6 +215,15 @@ export default {
         recodeType: "view",
         newRecodeObj,
       })
+    },
+    showCitationPopup(dataInfo) {
+      this.citationObj.citation = dataInfo.citation
+      this.citationObj.title = dataInfo.title
+      this.showCitation = true
+    },
+    closeCitationComp() {
+      this.showCitation = false
+      this.citationObj = {}
     },
   },
 }

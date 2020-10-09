@@ -1,5 +1,11 @@
 <template>
-  <div class="datainfo-container">
+  <div class="datainfo-container mb-40">
+    <citation-popup
+      class="fixed"
+      v-if="showCitation"
+      :citationObj="citationObj"
+      @close-citation-comp="closeCitationComp"
+    />
     <header class="header-bg py-10 w-full">
       <div
         v-if="Object.keys(dataDetailInfo).length > 0"
@@ -93,6 +99,18 @@
                 </td>
               </tr>
               <tr class=" ">
+                <td>Citation</td>
+                <td class="text-2xl font-normal">
+                  {{ dataDetailInfo.citation.length }}
+                  <i
+                    @click.stop="showCitationPopup(dataDetailInfo)"
+                    v-show="dataDetailInfo.citation.length > 0"
+                    class="fa fa-external-link-square z-10 cursor-pointer"
+                    aria-hidden="true"
+                  ></i>
+                </td>
+              </tr>
+              <tr class=" ">
                 <td>Instrument</td>
                 <td class="text-2xl font-normal">
                   {{ dataDetailInfo.cmr.Instrument }}
@@ -138,21 +156,22 @@
               </tr>
             </table>
             <footer
-              class="flex mt-12 justify-end text-white text-3xl font-normal"
+              class="flex justify-end mt-12 text-white text-3xl font-normal"
             >
               <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
                 <i class="fa fa-thumbs-o-up mr-3" aria-hidden="true"></i>Vote
               </div>
-              <div
-                class="flex mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer"
-              >
-                <img class="mr-3" src="../assets/image/download.svg" />
+
+              <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
+                <img class="mr-3 inline" src="../assets/image/download.svg" />
                 Download
               </div>
-              <div
-                class="flex mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer"
-              >
-                <img class="mr-3" src="../assets/image/downloadPackage.svg" />
+
+              <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
+                <img
+                  class="mr-3 inline"
+                  src="../assets/image/downloadPackage.svg"
+                />
                 Download Package
               </div>
             </footer>
@@ -172,12 +191,20 @@
 import { mapGetters } from "vuex"
 import Date from "@/modules/DateFormat.js"
 import RelatedList from "@/components/RelatedList"
+import CitationPopup from "@/components/CitationPopup"
 /* eslint-disable no-debugger */
 
 export default {
   name: "DataInfo",
   components: {
     RelatedList,
+    CitationPopup,
+  },
+  data() {
+    return {
+      showCitation: false,
+      citationObj: {},
+    }
   },
   computed: {
     ...mapGetters({
@@ -217,6 +244,15 @@ export default {
     data_format(raw_date, to_day = false) {
       if (to_day) return new Date(raw_date).format("yyyy-MM-dd")
       return new Date(raw_date).format("yyyy-MM-dd hh:mm:ss")
+    },
+    showCitationPopup(dataInfo) {
+      this.citationObj.citation = dataInfo.citation
+      this.citationObj.title = dataInfo.title
+      this.showCitation = true
+    },
+    closeCitationComp() {
+      this.showCitation = false
+      this.citationObj = {}
     },
   },
 }

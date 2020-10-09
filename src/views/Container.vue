@@ -2,17 +2,20 @@
   <div class="main-container w-full min-h-screen">
     <Header v-if="current_route_name !== 'DataInfo'" />
     <router-view></router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./Header"
+import Footer from "./Footer"
 // import DataList from "@/components/DataList"
 
 export default {
   name: "Container",
   components: {
     Header,
+    Footer,
     // DataList,
   },
   computed: {
@@ -25,6 +28,6 @@ export default {
 
 <style>
 .main-container {
-  background-color: #fff;
+  background-color: #e5e5e5;
 }
 </style>
