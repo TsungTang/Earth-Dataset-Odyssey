@@ -26,6 +26,7 @@ module.exports = {
       '9xl': '7rem'
     },
     height: theme => ({
+      "full": "100%",
       "screen": "100vh",
       "screen/2": "50vh",
       "screen/3": "calc(100vh / 3)",
@@ -35,7 +36,10 @@ module.exports = {
     backgroundColor: theme => ({
       ...theme('colors'),
       'deepblue': '#213C53',
-      'lightgreen': "#43BA1A"
+      'lightgreen': "#43BA1A",
+      'lightgreen2': "#EEFFE9",
+      'covergray': "rgba(34, 34, 34, 0.8)",
+      "lightgray": '#F5F5F7'
     }),
     borderColor: theme => ({
       ...theme('colors'),
@@ -45,7 +49,8 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       'deepblue': '#213C53',
-      'lightgreen': "#43BA1A"
+      'lightgreen': "#43BA1A",
+      'lightgreen3': "#A3EE89"
     }),
     screens: {
       'sm': '640px',

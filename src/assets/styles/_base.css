@@ -23,14 +23,14 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: #fff;
+  background-color: #e5e5e5;
 
 }
 
 body {
   font-weight: 300;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #e5e5e5;
 
 }
 
@@ -53,13 +53,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 *::-webkit-scrollbar {
+  border-radius: 30px;
   width: 12px;               /* width of the entire scrollbar */
 }
 *::-webkit-scrollbar-track {
-  background: #e5e5e5;        /* color of the tracking area */
+  border-radius: 30px;
+  background: #fff;        /* color of the tracking area */
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #BDBDBD;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
+  background-color: #fff;    /* color of the scroll thumb */
+  border-radius: 30px;       /* roundness of the scroll thumb */
   border: 3px solid #e5e5e5;  /* creates padding around scroll thumb */
 }

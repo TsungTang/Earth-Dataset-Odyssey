@@ -4,7 +4,7 @@
       v-if="current_route_name === 'RecommendView'"
       class="flex flex-col items-center w-full"
     >
-      <div class="header-bg w-full min-h-50vh">
+      <div class="header-bg absolute top-0 left-0 w-full min-h-50vh">
         <router-link :to="{ name: 'RecommendView' }">
           <div class="top-card w-4/5 mx-auto mt-12 text-white font-normal">
             <div class="source-link">
@@ -22,9 +22,9 @@
           </div>
         </router-link>
       </div>
-      <div class="search-container relative w-full">
+      <div class="search-container relative w-full min-h-50vh h-full mt-96">
         <div
-          class="search-card absolute flex flex-col items-center py-12 w-4/5 rounded-1rem bg-deepblue"
+          class="search-card mx-auto flex flex-col items-center py-12 w-4/5 rounded-1rem bg-deepblue"
         >
           <h2 class="mb-4 text-white text-5.5xl font-bold">
             Search for <span class="text-lightgreen">7,000</span> dataset on
@@ -44,41 +44,54 @@
                 class="fa fa-search p-4 text-3xl text-gray-900"
                 aria-hidden="true"
               ></i>
-              <input
-                @keyup.enter="searchDataset"
-                ref="search_input"
-                class="flex-grow py-3 text-3xl font-medium"
-                type="text"
-                v-model="searchText"
-                placeholder="Search for Dataset"
-              />
-              <div class="relativew h-full border-l border-m-grapy py-4 px-6">
-                <span
-                  @click.stop.prevent="showCalender = !showCalender"
-                  class="text-2xl font-inter leading-10 cursor-pointer"
-                  ><i class="fa fa-calendar mr-2" aria-hidden="true"></i>
-                  {{ renderDate }}
-                </span>
-                <v-date-picker
-                  v-click-outside="closeDatePicker"
-                  :dark="true"
-                  v-if="showCalender"
-                  class="calender-body min-w-290px absolute z-20 border border-black"
-                  v-model="dates"
-                  range
-                >
-                </v-date-picker>
-              </div>
-            </div>
-            <div
-              class="justify-self-end rounded-1rem mx-6 px-6 py-4 bg-lightgreen text-2xl font-normal font-inter text-white cursor-pointer"
-              aria-hidden="true"
-              @click="searchDataset"
-            >
-              Search
+              <resizable-textarea ref="resize">
+                <textarea
+                  @keyup.enter="searchDataset"
+                  ref="textarea"
+                  class="search-text flex-grow text-3xl font-medium focus:outline-none pt-12"
+                  wrap="soft"
+                  type="text"
+                  maxlength="3000"
+                  v-model="searchText"
+                  placeholder="Search for Dataset"
+                ></textarea>
+              </resizable-textarea>
             </div>
           </div>
-          <h3 class="mt-12 text-white font-medium text-3xl leading-10">
+          <div class="my-4 text-lightgreen3 text-2xl font-inter">
+            <img
+              src="../assets/image/star.svg"
+              alt="star"
+              class="inline mr-4"
+            />EDO will using NLP techniques for optimize your search results
+          </div>
+          <div class="relative mb-6">
+            <span
+              @click.stop.prevent="showCalender = !showCalender"
+              class="text-2xl font-semibold text-white font-inter leading-10 cursor-pointer"
+              ><i class="fa fa-calendar mr-2" aria-hidden="true"></i>
+              {{ renderDate }}
+            </span>
+            <v-date-picker
+              v-click-outside="closeDatePicker"
+              :dark="true"
+              :show-current="false"
+              @change="dateCheck"
+              v-if="showCalender"
+              class="calender-body min-w-290px absolute z-20 border border-black"
+              v-model="dates"
+              range
+            >
+            </v-date-picker>
+          </div>
+          <div
+            class="rounded-1rem px-32 py-4 bg-lightgreen text-2xl font-normal font-inter text-white cursor-pointer"
+            aria-hidden="true"
+            @click="searchDataset"
+          >
+            Search
+          </div>
+          <h3 class="mt-6 text-white font-medium text-3xl leading-10">
             Top Datasets Searches
           </h3>
           <div
@@ -111,7 +124,7 @@
                 height="40"
               />
             </div>
-            <div class="text-2xl ml-6 leading-12">
+            <div class="text-2xl ml-4 leading-12">
               Welcome to Earth Dataset Odyssey
             </div>
           </router-link>
@@ -133,7 +146,8 @@
             <input
               @keyup.enter="searchDataset"
               ref="search_input"
-              class="flex-grow py-3 text-3xl font-medium"
+              class="flex-grow py-3 text-3xl font-medium break-words"
+              style="text-wrap: unrestricted"
               type="text"
               v-model="searchText"
               placeholder="Search for Dataset"
@@ -154,13 +168,14 @@
 
 <script>
 import Date from "@/modules/DateFormat.js"
-
+import ResizableTextarea from "@/components/ResizableTextarea"
 import { mapGetters } from "vuex"
+
 export default {
   name: "Header",
-  // components: {
-  //   DateRangePicker,
-  // },
+  components: {
+    ResizableTextarea,
+  },
   data() {
     const init_date = this.initDatePickerData()
     return {
@@ -173,6 +188,16 @@ export default {
       ],
     }
   },
+  // watch: {
+  //   renderDate: {
+  //     handler() {
+  //       if (this.dates.filter((el) => el.length > 0).length !== 2) return
+  //       //  if(   this.dates[1])
+  //       Date.parse(temp1[0]) <
+  //     },
+  //     deep: true,
+  //   },
+  // },
   computed: {
     ...mapGetters({
       dataListURL: "getDataListURL",
@@ -190,6 +215,7 @@ export default {
         }
         return false
       }
+
       const start_time = existElement(this.dates[0]) ? this.dates[0] : "_"
       const end_time = existElement(this.dates[1]) ? this.dates[1] : "_"
       return `${start_time} To ${end_time}`
@@ -202,6 +228,20 @@ export default {
         showCalender: false,
       }
     },
+    dateCheck() {
+      if (this.dates.filter((el) => el.length > 0).length === 0) {
+        return
+      }
+
+      if (Date.parse(this.dates[1]) < Date.parse(this.dates[0])) {
+        this.dates[1] = ""
+      }
+    },
+    triggerInput() {
+      this.$nextTick(() => {
+        this.$refs.resize.$el.dispatchEvent(new Event("input"))
+      })
+    },
     closeDatePicker() {
       this.showCalender = false
     },
@@ -209,7 +249,7 @@ export default {
       if (!classes.disabled) {
         classes.disabled = date.getTime() < new Date()
       }
-      // return classes
+      return classes
     },
     updateValues() {
       console.log("update")
@@ -218,10 +258,12 @@ export default {
       console.log("toggle")
     },
     searchDataset() {
-      console.log("start search ", this.searchText)
       if (this.$route.name !== "SearchResult")
         this.$router.push({ name: "SearchResult" })
-      this.$store.dispatch("set_searchKeyword", this.searchText)
+      this.$store.dispatch("set_searchKeyword", {
+        searchText: this.searchText,
+        searchTime: this.dates,
+      })
     },
     defaultKeyToSearchText(keyword) {
       this.searchText = keyword
@@ -245,15 +287,18 @@ export default {
 
 .header-bg {
   background-image: url("../assets/image/headerCover.png");
+  background-size: auto;
+  background-position: center;
+  background-color: #000000;
 }
 .search-container {
   height: 20rem;
 }
-.search-card {
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-}
+// .search-card {
+//   left: 50%;
+//   bottom: 10%;
+//   transform: translateX(-50%);
+// }
 .search-card_result {
   left: 50%;
   transform: translateX(-50%) translateY(-30%);
@@ -267,6 +312,11 @@ export default {
   .search-container {
     height: 12rem;
   }
+}
+
+.search-text {
+  resize: none;
+  max-height: 20rem;
 }
 </style>
 

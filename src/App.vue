@@ -35,7 +35,7 @@ html,
 body,
 h1 {
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   letter-spacing: 0.01em;
 }
 

@@ -1,5 +1,18 @@
 <template>
-  <div></div>
+  <div class="fixed bottom-0 w-screen bg-white py-4">
+    <div
+      class="flex justify-between items-center w-4/5 mx-auto text-xl font-normal"
+    >
+      <div class="mark flex items-center">
+        <img src="../assets/image/NASALogo.png" class="mr-6 w-20" alt="NASA" />
+        <div class="">
+          <div>Space Apps is a NASA</div>
+          <div>incubator innovation program.</div>
+        </div>
+      </div>
+      <div class="ver">2020 Buy it Crash it @ NASA hackathon</div>
+    </div>
+  </div>
 </template>
 
 <script>
