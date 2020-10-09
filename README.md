@@ -39,6 +39,11 @@ bash -c "gdown https://drive.google.com/uc?id=1-nudWl3zA3zn0IMrq7Mk7Oirdgk5c8VP 
 cd ~/Earth-Dataset-Odyssey/backend/docker
 docker-compose build
 docker-compose up
+```
+Make migration
+Start with another session in terminal.
+```shell
+cd ~/Earth-Dataset-Odyssey/backend/docker
 docker-compose exec web bash -c "python manage.py migrate"
 ```
 
