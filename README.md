@@ -40,24 +40,24 @@ cd ~/Earth-Dataset-Odyssey/backend/docker
 docker-compose build
 docker-compose up
 ```
-Make migration
-Start with another session in terminal.
+Make migration    
+Start with another session in terminal.    
 ```shell
 cd ~/Earth-Dataset-Odyssey/backend/docker
 docker-compose exec web bash -c "python manage.py migrate"
 ```
 
-5. Run frontend
-Start with another session in terminal.
+5. Run frontend    
+Start with another session in terminal.    
 ```shell
 cd ~/Earth-Dataset-Odyssey
 npm install
 npm run serve
 ```
 
-6. Set up proxy server
+6. Set up proxy server    
 Proxy Server only need in development server.    
-Start with another session in terminal.
+Start with another session in terminal.    
 ```
 cd ~/Earth-Dataset-Odyssey/proxy-server
 npm install
