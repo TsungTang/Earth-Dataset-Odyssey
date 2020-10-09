@@ -5,18 +5,20 @@ EDO(Earth Dataset Odyssey) Recommender system.
 EDO (Earth Dataset Odyssey), a lightweight geological dataset recommendation website with a built-in NLP recommendation engine. The homepage of EDO shows several recent earth disaster events. Through the article narration, it can help citizen scientists quickly grasp the outline of the issues, as well as the datasets related to the issues.
 
 ## Requirements
-node version v10.17.0
-npm version 6.11.3
-docker-compose version 1.27.4
-Docker version 19.03.13
-python 3.7.9 
-python3-pip
+node version v10.17.0    
+npm version 6.11.3    
+docker-compose version 1.27.4    
+Docker version 19.03.13    
+python 3.7.9    
+python3-pip    
 
 ## Getting Started
 1. Clone the repository
 ```shell
 cd ~
 git clone git@github.com:TsungTang/Earth-Dataset-Odyssey.git
+cd ~/Earth-Dataset-Odyssey
+git submodule add git@github.com:bonzoyang/buyitcrashit.git backend
 ```
 
 2. Update the backend submodule
@@ -27,18 +29,18 @@ git submodule update --init --recursive
 
 3. Download file
 ```shell
-cd ~/Earth-Dataset-Odyssey/buyitcrashit/docker/rcmd
+cd ~/Earth-Dataset-Odyssey/backend/docker/rcmd
 pip install gdown
-bash -c "gdown https://drive.google.com/uc?id=1-nudWl3zA3zn0IMrq7Mk7Oirdgk5c8VP | python" 
+bash -c "gdown https://drive.google.com/uc?id=1-nudWl3zA3zn0IMrq7Mk7Oirdgk5c8VP | python"
 ```
 
 4. Run backend
 ```shell
-cd ~/Earth-Dataset-Odyssey/buyitcrushit/docker
+cd ~/Earth-Dataset-Odyssey/backend/docker
 docker-compose build
 docker-compose up
+docker-compose exec web bash -c "python manage.py migrate"
 ```
-`docker-compose exec web bash -c "python manage.py migrate"`
 
 5. Run frontend
 Start with another session in terminal.
@@ -58,7 +60,7 @@ node index.js
 ```
 
 7. Check it out
-You may use Earth Dataset Odyssey project in
+You may use Earth Dataset Odyssey project in    
 [http://localhost:5566/#/edo/recommend-datasets](http://localhost:5566/#/edo/recommend-datasets)
 
 ## Related projects and reference papers
