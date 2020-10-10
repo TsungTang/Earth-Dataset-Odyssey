@@ -31,17 +31,16 @@
       </div>
     </header>
     <div class="main-info-container w-4/5 mx-auto">
-      <!-- <router-link :to="{ name: 'RecommendView' }"> -->
       <div @click="$router.go(-1)" class="cursor-pointer">
         <h3 class="flex items-center mt-16 text-24R font-bold">
           <i class="fa fa-chevron-left text-base mr-6" aria-hidden="true"></i
           >Back to Previous Page
         </h3>
       </div>
-      <!-- </router-link> -->
-      <div class="flex w-full mt-6">
-        <div class="mr-10 rounded-1rem">
+      <div class="flex sm:flex-col lg:flex-row w-full mt-6">
+        <div class="sm:mb-6 lg:mr-10 rounded-1rem">
           <img
+            class="mx-auto"
             :src="baseImageURL + dataDetailInfo.id + '?h=200&w=295'"
             alt=""
             width="295"
@@ -49,85 +48,113 @@
         </div>
 
         <div class="w-full">
-          <h3 class="px-2 text-3xl font-bold">
+          <h3 class="px-2 text-3xl font-bold lg:mb-8">
             {{ dataDetailInfo.title }}
           </h3>
           <div class="info-key w-full min-w-30vw text-3xl font-semibold">
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="pr-40">Summary</div>
+              <div class="px-5 text-2xl font-normal break-normal text-justify">
+                {{ dataDetailInfo.cmr.summary }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Temporal Coverage</div>
+              <div class="px-5 text-2xl font-normal">
+                {{
+                  data_format(dataDetailInfo.time_start, true) +
+                  " to " +
+                  data_format(dataDetailInfo.time_end, true)
+                }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Data Format</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.original_format }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Coordinate System</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.coordinate_system }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Spatial Extent</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.cmr.spatialExtent }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Number of Granules</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.granule_count }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Citation</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.citation.length }}
+                <i
+                  @click.stop="showCitationPopup(dataDetailInfo)"
+                  v-show="dataDetailInfo.citation.length > 0"
+                  class="fa fa-external-link-square z-10 cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Instrument</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.cmr.Instrument }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Version</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ dataDetailInfo.version_id }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Updated</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ data_format(dataDetailInfo.updated) }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">URL</div>
+              <div class="px-5 text-2xl font-normal">
+                <a
+                  class="border rounded-lg p-2"
+                  :href="dataDoc + dataDetailInfo.id + '.html'"
+                  target="_blank"
+                  >{{ dataDoc + dataDetailInfo.id + ".html" }}</a
+                >
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Totla of Votes</div>
+              <div class="px-5 text-2xl font-normal flex">
+                <div class="mr-8">
+                  <span class="text-lightgreen mr-2">4</span>Researches
+                </div>
+                <div class="mr-8">
+                  <span class="text-lightgreen mr-2">10</span>Analysis
+                </div>
+                <div class="mr-8">
+                  <span class="text-lightgreen mr-2">10</span>citizen scientist
+                </div>
+              </div>
+            </div>
+            <!-- 
             <table class="w-full">
               <colgroup>
-                <col span="1" style="width: 20%" />
-                <col span="1" style="width: 80%" />
+                <col span="1" class="sm:w-full md:w-1/5" />
+                <col span="1" class="sm:w-0 md:w-4/5" />
               </colgroup>
-              <tr class=" ">
-                <td>Summary</td>
-                <td class="text-2xl font-normal break-normal text-justify">
-                  {{ dataDetailInfo.cmr.summary }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Temporal Coverage</td>
-                <td class="text-2xl font-normal">
-                  {{
-                    data_format(dataDetailInfo.time_start, true) +
-                    " to " +
-                    data_format(dataDetailInfo.time_end, true)
-                  }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Data Format</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.original_format }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Coordinate System</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.coordinate_system }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Spatial Extent</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.cmr.spatialExtent }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Number of Granules</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.granule_count }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Citation</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.citation.length }}
-                  <i
-                    @click.stop="showCitationPopup(dataDetailInfo)"
-                    v-show="dataDetailInfo.citation.length > 0"
-                    class="fa fa-external-link-square z-10 cursor-pointer"
-                    aria-hidden="true"
-                  ></i>
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Instrument</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.cmr.Instrument }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Version</td>
-                <td class="text-2xl font-normal">
-                  {{ dataDetailInfo.version_id }}
-                </td>
-              </tr>
-              <tr class="">
-                <td>Updated</td>
-                <td class="text-2xl font-normal">
-                  {{ data_format(dataDetailInfo.updated) }}
-                </td>
-              </tr>
+
+
               <tr class="">
                 <td>URL</td>
                 <td class="text-2xl font-normal">
@@ -154,12 +181,13 @@
                   </div>
                 </td>
               </tr>
-            </table>
+            </table> -->
             <footer
               class="flex justify-end mt-12 text-white text-3xl font-normal"
             >
               <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
-                <i class="fa fa-thumbs-o-up mr-3" aria-hidden="true"></i>Vote
+                <i class="fa fa-thumbs-o-up mr-3" aria-hidden="true"></i
+                ><span class="">Vote</span>
               </div>
 
               <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">

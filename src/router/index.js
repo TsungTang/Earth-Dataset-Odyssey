@@ -5,6 +5,8 @@ import Unknown from "../views/Unknown.vue"
 import RecommendView from "../views/RecommendView"
 import DataInfo from "../views/DataInfo"
 import SearchResult from "../views/SearchResult"
+import ApiDocument from "../views/ApiDocument"
+import AboutUs from "../views/AboutUs"
 
 
 Vue.use(VueRouter)
@@ -30,6 +32,16 @@ const routes = [
         name: 'DataInfo',
         path: 'data-infomation/:dataId',
         component: DataInfo
+      },
+      {
+        name: "ApiDocument",
+        path: 'open-API',
+        component: ApiDocument
+      },
+      {
+        name: "AboutUs",
+        path: "about-us",
+        component: AboutUs
       }
     ]
   },

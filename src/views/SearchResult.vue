@@ -94,16 +94,18 @@
               </tr>
               <tr class="leading-12">
                 <td>Citation</td>
-                <td class="text-2xl font-normal">
+                <td
+                  class="text-2xl font-normal"
+                  :class="{
+                    'text-lightgreen': eachdata.citation.length > 0,
+                    'hover:text-hov-lightgreen': eachdata.citation.length > 0,
+                  }"
+                >
                   {{ eachdata.citation.length }}
                   <i
                     @click.stop="showCitationPopup(eachdata)"
                     v-show="eachdata.citation.length !== 0"
                     class="fa fa-external-link-square z-10 cursor-pointer"
-                    :class="{
-                      'text-lightgreen': eachdata.citation.length > 0,
-                      'hover:text-hov-lightgreen': eachdata.citation.length > 0,
-                    }"
                     aria-hidden="true"
                   ></i>
                 </td>

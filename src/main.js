@@ -6,7 +6,12 @@ import './assets/styles/tailwind.css';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import vuetify from './plugins/vuetify';
+import VueCodemirror from 'vue-codemirror'
+
+// import base style
+import 'codemirror/lib/codemirror.css'
 Vue.use(VueAxios, axios)
+Vue.use(VueCodemirror)
 Vue.config.productionTip = false
 
 //  reference https://stackoverflow.com/questions/36170425/detect-click-outside-element
