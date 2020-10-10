@@ -100,6 +100,10 @@
                     @click.stop="showCitationPopup(eachdata)"
                     v-show="eachdata.citation.length !== 0"
                     class="fa fa-external-link-square z-10 cursor-pointer"
+                    :class="{
+                      'text-lightgreen': eachdata.citation.length > 0,
+                      'hover:text-hov-lightgreen': eachdata.citation.length > 0,
+                    }"
                     aria-hidden="true"
                   ></i>
                 </td>

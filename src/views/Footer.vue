@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 w-screen bg-white py-4">
+  <div class="fixed z-10 bottom-0 w-screen bg-white py-4">
     <div
       class="flex justify-between items-center w-4/5 mx-auto text-xl font-normal"
     >

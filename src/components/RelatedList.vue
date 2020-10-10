@@ -78,7 +78,13 @@
               </tr>
               <tr class="leading-12">
                 <td>Citations</td>
-                <td class="text-2xl font-normal">
+                <td
+                  class="text-2xl font-normal"
+                  :class="{
+                    'text-lightgreen': eachdata.citation.length > 0,
+                    'hover:text-hov-lightgreen': eachdata.citation.length > 0,
+                  }"
+                >
                   {{ eachdata.citation.length }}
                   <i
                     @click.stop="showCitationPopup(eachdata)"
@@ -223,6 +229,7 @@ export default {
     },
     data_format(raw_date, to_day = false) {
       if (to_day) return new Date(raw_date).format("yyyy-MM-dd")
+      if (!raw_date) return "_"
       return new Date(raw_date).format("yyyy-MM-dd hh:mm:ss")
     },
     showCitationPopup(dataInfo) {

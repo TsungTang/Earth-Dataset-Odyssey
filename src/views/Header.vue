@@ -24,7 +24,7 @@
             <div class="text-2xl mt-2 leading-12">
               Welcome to Earth Dataset Odyssey
             </div>
-            <div class="text-7xl">Earthling</div>
+            <div class="text-7xl">EDO</div>
           </div>
         </router-link>
       </div>
@@ -47,20 +47,21 @@
               class="flex items-center justify-between bg-white rounded-1rem"
             >
               <i
-                class="fa fa-search p-4 text-3xl text-gray-900"
+                class="fa fa-search px-4 text-3xl text-gray-900"
                 aria-hidden="true"
               ></i>
               <resizable-textarea ref="resize">
                 <textarea
                   @keyup.enter="searchDataset"
                   ref="textarea"
-                  class="search-text flex-grow text-3xl font-medium focus:outline-none py-12"
+                  class="search-text flex-grow text-3xl font-medium focus:outline-none"
                   wrap="soft"
                   type="text"
                   maxlength="5000"
                   v-model="searchText"
                   placeholder="Search for Dataset"
                 ></textarea>
+                <!-- leading-14 -->
               </resizable-textarea>
             </div>
           </div>
@@ -322,7 +323,9 @@ export default {
 
 .search-text {
   resize: none;
-  max-height: 20rem;
+  height: 4rem;
+  padding: 1rem 0;
+  max-height: 30rem;
 }
 </style>
 

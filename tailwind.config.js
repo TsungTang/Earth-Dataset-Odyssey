@@ -37,6 +37,7 @@ module.exports = {
       ...theme('colors'),
       'deepblue': '#213C53',
       'lightgreen': "#43BA1A",
+      'hov-lightgreen': "#34A00E",
       'lightgreen2': "#EEFFE9",
       'covergray': "rgba(34, 34, 34, 0.8)",
       "lightgray": '#F5F5F7'
@@ -50,7 +51,9 @@ module.exports = {
       ...theme('colors'),
       'deepblue': '#213C53',
       'lightgreen': "#43BA1A",
-      'lightgreen3': "#A3EE89"
+      'hov-lightgreen': "#34A00E",
+      'lightgreen3': "#A3EE89",
+      'current': '#222222'
     }),
     screens: {
       'sm': '440px',
@@ -144,12 +147,16 @@ module.exports = {
     },
     extend: {
       lineHeight: {
-        '12': '3rem'
+        '12': '3rem',
+        '14': '4rem'
       },
       spacing: {
         '72': '18rem',
         '84': '21rem',
         '96': '24rem',
+      },
+      opacity: {
+        '10': '0.1'
       }
     },
     fontFamily: {
@@ -164,6 +171,8 @@ module.exports = {
     translate: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     flexWrap: ['responsive', 'hover', 'focus'],
+    textOpacity: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+
   },
   plugins: [],
 }

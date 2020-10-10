@@ -10,7 +10,7 @@
           class="disaster-card flex sm:flex-wrap md:flex-wrap lg:flex-no-wrap"
         >
           <a
-            class="disaster-subcard flex flex-col bg-white shadow-card rounded-lg sm:mb-8 md:mb-0"
+            class="disaster-subcard flex flex-col bg-white shadow-card rounded-lg font-inter text-current hover:text-opacity-75 sm:mb-8 md:mb-0"
             :class="{ 'mr-8': index !== 3 }"
             v-for="(disaster, index) in disasterData"
             :key="index + disaster.title"
@@ -29,7 +29,7 @@
               </div>
               <span
                 @click.self.stop.prevent="disasterRelatedData(disaster)"
-                class="text-lightgreen p-3 text-2xl font-medium"
+                class="text-lightgreen p-3 text-2xl font-medium hover:text-hov-lightgreen"
                 >{{
                   "Showing related datasets (" +
                   disaster.relatedDataCounts +

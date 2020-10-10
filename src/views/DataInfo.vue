@@ -226,23 +226,12 @@ export default {
     }
 
     window.scrollTo(0, 0)
-    // const newRecodeObj = {
-    //   id: this.dataDetailInfo.id,
-    //   time: new Date().format("yyyy-MM-dd hh:mm:ss"),
-    // }
-    // const base_recom_data = JSON.parse(
-    //   JSON.stringify(this.recommend_api_base_data)
-    // )
-    // base_recom_data.view.push(newRecodeObj)
-    // // 只帶入目前的資料
-    // this.$store.dispatch("recommend_api", {
-    //   recodeType: "view",
-    //   data: base_recom_data,
-    // })
   },
   methods: {
     data_format(raw_date, to_day = false) {
       if (to_day) return new Date(raw_date).format("yyyy-MM-dd")
+      if (!raw_date) return "_"
+
       return new Date(raw_date).format("yyyy-MM-dd hh:mm:ss")
     },
     showCitationPopup(dataInfo) {
