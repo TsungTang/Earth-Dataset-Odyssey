@@ -42,7 +42,7 @@
     </div>
     <div class="main flex flex-col w-full">
       <div
-        class="flex my-10 cursor-pointer p-3 hover:bg-lightgreen2 rounded-2rem"
+        class="flex my-10 cursor-pointer p-3 hover:bg-lightgreen2 duration-150 rounded-2rem"
         @click="toDataPage(eachdata.id)"
         v-for="(eachdata, index) in relatedList"
         :key="eachdata.id + '_' + index"

@@ -1,5 +1,11 @@
 <template>
   <div class="header-container w-full">
+    <div class="top-nav absolute top-0 left-0 w-screen z-20">
+      <div class="sm:w-fulll xl:w-4/5 flex justify-end mx-auto p-8">
+        <div class="text-white text-2xl font-medium">API Document</div>
+        <div class="ml-16 text-white text-2xl font-medium">About Us</div>
+      </div>
+    </div>
     <div
       v-if="current_route_name === 'RecommendView'"
       class="flex flex-col items-center w-full"
@@ -24,14 +30,14 @@
       </div>
       <div class="search-container relative w-full min-h-50vh h-full mt-96">
         <div
-          class="search-card mx-auto flex flex-col items-center py-12 w-4/5 rounded-1rem bg-deepblue"
+          class="search-card mx-auto flex flex-col items-center py-12 sm:px-2 md:px-0 w-4/5 rounded-1rem bg-deepblue"
         >
-          <h2 class="mb-4 text-white text-5.5xl font-bold">
+          <h2 class="mb-4 text-white text-5.5xl font-bold text-center">
             Search for <span class="text-lightgreen">7,000</span> dataset on
             NASA
           </h2>
           <h4
-            class="sub-search-title mb-6 text-2xl text-white font-inter font-normal"
+            class="sub-search-title mb-6 text-2xl text-white font-inter font-normal text-center"
           >
             NASA's Earth science data archives over 7,000 datasets comprising
             over half a billion files.
@@ -51,14 +57,14 @@
                   class="search-text flex-grow text-3xl font-medium focus:outline-none pt-12"
                   wrap="soft"
                   type="text"
-                  maxlength="3000"
+                  maxlength="5000"
                   v-model="searchText"
                   placeholder="Search for Dataset"
                 ></textarea>
               </resizable-textarea>
             </div>
           </div>
-          <div class="my-4 text-lightgreen3 text-2xl font-inter">
+          <div class="my-4 text-lightgreen3 text-2xl font-inter text-center">
             <img
               src="../assets/image/star.svg"
               alt="star"
@@ -95,13 +101,13 @@
             Top Datasets Searches
           </h3>
           <div
-            class="keyword-card flex items-center justify-center mt-4 text-2xl text-white font-normal"
+            class="keyword-card flex items-center justify-center sm:flex-col md:flex-row mt-4 text-2xl text-white font-normal"
           >
             <div
               v-for="keyword in defaultKeyWordList"
               :key="keyword"
               @click="defaultKeyToSearchText(keyword)"
-              class="p-2 mx-4 border-solid border border-white rounded-lg cursor-pointer"
+              class="p-2 mx-4 border-solid border border-white rounded-lg cursor-pointer sm:mb-4 md:mb-0"
             >
               {{ keyword }}
             </div>
