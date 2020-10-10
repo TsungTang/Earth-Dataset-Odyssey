@@ -54,7 +54,7 @@
                 <textarea
                   @keyup.enter="searchDataset"
                   ref="textarea"
-                  class="search-text flex-grow text-3xl font-medium focus:outline-none pt-12"
+                  class="search-text flex-grow text-3xl font-medium focus:outline-none py-12"
                   wrap="soft"
                   type="text"
                   maxlength="5000"
