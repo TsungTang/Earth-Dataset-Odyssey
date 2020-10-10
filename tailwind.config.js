@@ -53,7 +53,7 @@ module.exports = {
       'lightgreen3': "#A3EE89"
     }),
     screens: {
-      'sm': '640px',
+      'sm': '440px',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',
@@ -163,7 +163,7 @@ module.exports = {
     scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     translate: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
-
+    flexWrap: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
 }

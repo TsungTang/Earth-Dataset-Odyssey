@@ -6,9 +6,11 @@
           Receent
           <span class="text-lightgreen">Natural Disasters</span> datasets
         </h2>
-        <div class="disaster-card flex">
+        <div
+          class="disaster-card flex sm:flex-wrap md:flex-wrap lg:flex-no-wrap"
+        >
           <a
-            class="disaster-subcard flex flex-col bg-white shadow-card rounded-lg"
+            class="disaster-subcard flex flex-col bg-white shadow-card rounded-lg sm:mb-8 md:mb-0"
             :class="{ 'mr-8': index !== 3 }"
             v-for="(disaster, index) in disasterData"
             :key="index + disaster.title"
@@ -38,7 +40,7 @@
           </a>
         </div>
       </div>
-
+      <div ref="disasterlist"></div>
       <RelatedList
         v-if="showRelatedDataset"
         class="my-12"
@@ -131,13 +133,22 @@ Widespread flooding has claimed at least 100 lives and damaged or destroyed more
     toDisasterPage(url) {
       window.open(url)
     },
+    goto(refName) {
+      var element = this.$refs[refName]
+      console.log(element)
+      var top = element.offsetTop
+      window.scrollTo(0, top)
+    },
     disasterRelatedData(disaster) {
       this.disasterObj = disaster
       this.disasterObj.time = new Date().format("yyyy-MM-dd hh:mm:ss")
       this.disasterObj.from = "disaster"
 
       this.showRelatedDataset = true
-      this.updateBlogRecode()
+
+      setTimeout(() => {
+        this.goto("disasterlist")
+      }, 300)
     },
     hideRelatedDataList() {
       this.disasterObj = {}
