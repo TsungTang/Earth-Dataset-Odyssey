@@ -2,8 +2,8 @@
   <div class="datalist-container w-full h-full mb-40">
     <div class="w-4/5 mx-auto">
       <div class="disasters-container w-full">
-        <h2 class="subtitle text-4xl font-bold">
-          Receent
+        <h2 class="subtitle mt-6 text-4xl font-bold">
+          Recent
           <span class="text-lightgreen">Natural Disasters</span> datasets
         </h2>
         <div
