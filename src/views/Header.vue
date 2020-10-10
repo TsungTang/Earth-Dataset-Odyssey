@@ -2,8 +2,16 @@
   <div class="header-container w-full">
     <div class="top-nav absolute top-0 left-0 w-screen z-20">
       <div class="sm:w-fulll xl:w-4/5 flex justify-end mx-auto p-8">
-        <div class="text-white text-2xl font-medium">API Document</div>
-        <div class="ml-16 text-white text-2xl font-medium">About Us</div>
+        <routerLink
+          :to="{ name: 'ApiDocument' }"
+          class="text-white text-2xl font-medium"
+          >API Document</routerLink
+        >
+        <routerLink
+          :to="{ name: 'AboutUs' }"
+          class="ml-16 text-white text-2xl font-medium"
+          >About Us</routerLink
+        >
       </div>
     </div>
     <div
@@ -116,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="'search-result'" class="search-header w-full">
+    <div v-else class="search-header w-full">
       <header class="header-bg py-10 w-full">
         <div class="top-card mx-auto py-8 w-4/5 text-white font-normal">
           <router-link
@@ -139,7 +147,10 @@
       </header>
 
       <!-- search card -->
-      <div class="search-container_result relative mb-40 w-full">
+      <div
+        v-show="current_route_name === 'SearchResult'"
+        class="search-container_result relative mb-40 w-full"
+      >
         <div
           class="search-card_result absolute flex flex-col items-center mx-auto py-12 w-4/5 rounded-1rem bg-deepblue"
         >

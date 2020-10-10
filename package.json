@@ -11,10 +11,12 @@
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "axios": "^0.20.0",
+    "cluster": "^0.7.7",
     "core-js": "^3.6.5",
     "tailwindcss": "^1.8.10",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
+    "vue-codemirror": "^4.0.6",
     "vue-router": "^3.2.0",
     "vue-textarea-autogrow-directive": "^0.1.6",
     "vuetify": "^2.2.11",

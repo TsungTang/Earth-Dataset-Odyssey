@@ -82,12 +82,13 @@ export default {
         {
           title: "Extreme Monsoon Rains in Pakistan",
           id: "article_0006",
-          url: "https://earthobservatory.nasa.gov/images/147350/spalte-splits",
+          url:
+            "https://earthobservatory.nasa.gov/images/147330/extreme-monsoon-rains-in-pakistan",
           img:
             "https://eoimages.gsfc.nasa.gov/images/imagerecords/147000/147330/pakistanflooding_tmo_2020265.jpg",
           des: `A heavy monsoon season has caused fatal flooding across Pakistan in 2020. More than 400 people have died since mid-June; another 400 were injured; and more than 200,000 homes were damaged or destroyed.
-
-The Sindh province in southeastern Pakistan, which received historic amounts of rain, has been the most affected region. The images above show a portion of Sindh on (September 21, 2020) compared to the same time last year (September 21, 2019). The false-color images, acquired by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite, use a combination of infrared and visible light (bands 7-2-1) to make it easier to see the boundary between water and land. Water appears navy blue and black; vegetation is bright green.`,
+          
+          The Sindh province in southeastern Pakistan, which received historic amounts of rain, has been the most affected region. The images above show a portion of Sindh on (September 21, 2020) compared to the same time last year (September 21, 2019). The false-color images, acquired by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite, use a combination of infrared and visible light (bands 7-2-1) to make it easier to see the boundary between water and land. Water appears navy blue and black; vegetation is bright green.`,
           relatedDataCounts: 20,
         },
         {
