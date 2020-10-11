@@ -42,23 +42,93 @@
     </div>
     <div class="main flex flex-col w-full">
       <div
-        class="flex my-10 cursor-pointer p-3 hover:bg-lightgreen2 duration-150 rounded-2rem"
+        class="flex sm:flex-col lg:flex-row w-full mt-6 cursor-pointer p-4 hover:bg-lightgreen2 duration-150 rounded-2rem"
         @click="toDataPage(eachdata.id)"
         v-for="(eachdata, index) in relatedList"
         :key="eachdata.id + '_' + index"
       >
-        <div class="mr-10">
+        <div class="sm:mb-6 lg:mr-10 rounded-1rem">
           <img
+            class="mx-auto"
             :src="baseImageURL + eachdata.id + '?h=200&w=300'"
             alt=""
             width="120"
           />
         </div>
         <div class="w-full">
-          <h3 class="mb-6 text-3xl font-bold">
+          <h3 class="px-2 mb-4 text-3xl font-bold">
             {{ eachdata.title }}
           </h3>
           <div class="info-key w-full min-w-30vw text-3xl font-semibold">
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Data Format</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ eachdata.original_format }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Spatial Extent</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ eachdata.cmr.spatialExtent }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Number of Granules</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ eachdata.granule_count }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Citation</div>
+              <div
+                class="px-5 text-2xl font-normal"
+                :class="{
+                  'text-lightgreen': eachdata.citation.length > 0,
+                  'hover:text-hov-lightgreen': eachdata.citation.length > 0,
+                }"
+              >
+                {{ eachdata.citation.length }}
+                <i
+                  @click.stop="showCitationPopup(eachdata)"
+                  v-show="eachdata.citation.length > 0"
+                  class="fa fa-external-link-square z-10 cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Instrument</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ eachdata.cmr.Instrument }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Version</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ eachdata.version_id }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col md:flex-row mb-4">
+              <div class="w-72">Updated</div>
+              <div class="px-5 text-2xl font-normal">
+                {{ data_format(eachdata.updated) }}
+              </div>
+            </div>
+            <div class="w-full flex sm:flex-col flex-wrap md:flex-row mb-4">
+              <div class="w-72">Totla of Votes</div>
+              <div class="px-5 text-2xl font-normal flex flex-wrap">
+                <div class="mr-8">
+                  <span class="text-lightgreen mr-2">4</span>Researches
+                </div>
+                <div class="mr-8">
+                  <span class="text-lightgreen mr-2">10</span>Analysis
+                </div>
+                <div class="mr-8">
+                  <span class="text-lightgreen mr-2">10</span>citizen scientist
+                </div>
+              </div>
+            </div>
+            <!-- 
             <table class="w-full">
               <colgroup>
                 <col span="1" style="width: 20%" />
@@ -127,7 +197,7 @@
                   </div>
                 </td>
               </tr>
-            </table>
+            </table> -->
           </div>
         </div>
       </div>
