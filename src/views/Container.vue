@@ -28,6 +28,6 @@ export default {
 
 <style>
 .main-container {
-  background-color: #e5e5e5;
+  background-color: #f7f7f7;
 }
 </style>
