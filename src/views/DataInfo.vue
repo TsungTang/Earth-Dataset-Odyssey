@@ -161,23 +161,42 @@
             <footer
               class="flex justify-end mt-12 text-white text-3xl font-normal"
             >
-              <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
-                <i class="fa fa-thumbs-o-up mr-3" aria-hidden="true"></i
-                ><span class="">Vote</span>
-              </div>
+              <a
+                href="javascrit:void(0);"
+                title="Vote"
+                class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer"
+              >
+                <i
+                  class="fa fa-thumbs-o-up sm:mr-0 md:mr-3 inline"
+                  aria-hidden="true"
+                ></i>
 
-              <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
-                <img class="mr-3 inline" src="../assets/image/download.svg" />
-                Download
-              </div>
+                <p class="sm:hidden md:contents">Vote</p>
+              </a>
 
-              <div class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer">
+              <a
+                href="javascrit:void(0);"
+                title="Download"
+                class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer"
+              >
                 <img
-                  class="mr-3 inline"
+                  class="sm:mr-0 md:mr-3 inline"
+                  src="../assets/image/download.svg"
+                />
+                <p class="sm:hidden md:contents">Download</p>
+              </a>
+
+              <a
+                href="javascrit:void(0);"
+                title="Download Package"
+                class="mr-8 bg-lightgreen px-4 rounded-lg cursor-pointer"
+              >
+                <img
+                  class="sm:mr-0 md:mr-3 inline"
                   src="../assets/image/downloadPackage.svg"
                 />
-                Download Package
-              </div>
+                <p class="sm:hidden md:contents">Download Package</p>
+              </a>
             </footer>
           </div>
         </div>

@@ -6,7 +6,9 @@
       v-click-outside="closeCitationComp"
       class="sm:w-full md:w-4/5 lg:w-3/5 min-h-30vh max-h-80vh overflow-y-auto m-auto bg-white p-8 shadow-card rounded-1rem"
     >
-      <header class="flex justify-between max-h-80vh mb-10">
+      <header
+        class="flex sm:flex-col md:flex-row justify-between max-h-80vh mb-10"
+      >
         <h2
           class="sm:w-full md:w-4/6 text-24R font-bold sm:text-left md:text-justify"
         >
@@ -16,7 +18,7 @@
         </h2>
         <h4
           @click="closeCitationComp"
-          class="text-lightgreen text-2xl font-medium cursor-pointer sm:hidden md:contents"
+          class="text-lightgreen text-2xl font-medium cursor-pointer sm:mt-6 md:mt-0"
         >
           Close
         </h4>
@@ -24,7 +26,7 @@
       <div>
         <table class="citation-table">
           <tr class="bg-lightgray text-3xl font-bold">
-            <th align="left" class="px-8 sm:hidden md:contents">Year</th>
+            <th align="left" class="px-8">Year</th>
             <th align="left" class="px-10 border-2 border-white">Citation</th>
           </tr>
           <tr v-for="cite in citationObj.citation" :key="'cite' + cite">
