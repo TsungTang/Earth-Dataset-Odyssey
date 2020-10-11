@@ -1,7 +1,7 @@
 <template>
   <div
     ref="related_container"
-    class="related-container min-h-15vh max-h-80vh overflow-y-auto w-full py-8 px-16 shadow-card bg-white rounded-1rem mb-20"
+    class="related-container min-h-15vh md:max-h-80vh md:overflow-y-auto w-full py-8 px-16 shadow-card bg-white rounded-1rem mb-20"
   >
     <citation-popup
       class="fixed"
@@ -56,7 +56,7 @@
           />
         </div>
         <div class="w-full">
-          <h3 class="px-2 mb-4 text-3xl font-bold">
+          <h3 class="px-2 mb-4 text-3xl font-bold sm:break-all md:break-normal">
             {{ eachdata.title }}
           </h3>
           <div class="info-key w-full min-w-30vw text-3xl font-semibold">

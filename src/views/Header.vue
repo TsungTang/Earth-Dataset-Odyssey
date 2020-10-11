@@ -38,7 +38,7 @@
       </div>
       <div class="search-container relative w-full min-h-50vh h-full mt-96">
         <div
-          class="search-card mx-auto flex flex-col items-center py-12 sm:px-2 md:px-0 w-4/5 rounded-1rem bg-deepblue"
+          class="search-card mx-auto flex flex-col items-center py-12 w-4/5 rounded-1rem bg-deepblue"
         >
           <h2 class="mb-4 text-white text-5.5xl font-bold text-center">
             Search for <span class="text-lightgreen">7,000</span> dataset on
@@ -317,20 +317,20 @@ export default {
 //   bottom: 10%;
 //   transform: translateX(-50%);
 // }
-.search-card_result {
-  left: 50%;
-  transform: translateX(-50%) translateY(-30%);
-}
-@media (min-height: 1000px) {
-  .search-card {
-    left: 50%;
-    bottom: 20%;
-    transform: translateX(-50%);
-  }
-  .search-container {
-    height: 12rem;
-  }
-}
+// .search-card_result {
+//   left: 50%;
+//   transform: translateX(-50%) translateY(-30%);
+// }
+// @media (min-height: 1000px) {
+//   .search-card {
+//     left: 50%;
+//     bottom: 20%;
+//     transform: translateX(-50%);
+//   }
+//   .search-container {
+//     height: 12rem;
+//   }
+// }
 
 .search-text {
   resize: none;

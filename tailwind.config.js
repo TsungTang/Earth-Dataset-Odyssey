@@ -56,11 +56,11 @@ module.exports = {
       'current': '#222222'
     }),
     screens: {
-      'sm': '440px',
-      // => @media (min-width: 640px) { ... }
+      'sm': '340px',
+      // => @media (min-width: 340px) { ... }
 
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
+      'md': '720px',
+      // => @media (min-width: 720px) { ... }
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
