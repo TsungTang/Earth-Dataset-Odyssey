@@ -56,7 +56,17 @@
         </div>
         <div class="w-full">
           <h3 class="mb-6 text-3xl font-bold">
-            {{ eachdata.title }}
+            {{ eachdata.title
+            }}<a
+              href="javascript:void(0);"
+              title="EDO recommends this dataset for you because it matches the date indicated in your keyword"
+            >
+              <i
+                v-if="eachdata.smart === 1"
+                class="fa fa-star text-yellow-500 px-4"
+                aria-hidden="true"
+              ></i>
+            </a>
           </h3>
           <div class="info-key w-full min-w-30vw text-3xl font-semibold">
             <table class="w-full">

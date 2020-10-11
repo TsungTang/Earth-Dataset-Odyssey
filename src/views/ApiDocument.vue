@@ -24,12 +24,12 @@
           <li class="leading-12">
             <span class="text-hov-lightgreen">&lt;STRAT TIME&gt;</span>: Please
             fill in starting time (format:
-            <span class="text-hov-lightgreen">"yyyy-MM-dd hh:mm:ss"</span>)
+            <span class="text-hov-lightgreen">"yyyy-MM-dd"</span>)
           </li>
           <li class="leading-12">
             <span class="text-hov-lightgreen">&lt;END TIME&gt;</span>: Please
             fill in ending time (format:
-            <span class="text-hov-lightgreen">"yyyy-MM-dd hh:mm:ss"</span>)
+            <span class="text-hov-lightgreen">"yyyy-MM-dd"</span>)
           </li>
         </ul>
       </div>

@@ -78,7 +78,7 @@
               src="../assets/image/star.svg"
               alt="star"
               class="inline mr-4"
-            />EDO will using NLP techniques for optimize your search results
+            />EDO, empower your search with NLP
           </div>
           <div class="relative mb-6">
             <span

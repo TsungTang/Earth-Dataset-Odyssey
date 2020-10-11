@@ -10,7 +10,13 @@
           <div>incubator innovation program.</div>
         </div>
       </div>
-      <div class="ver">2020 Buy it Crash it @ NASA hackathon</div>
+      <div class="ver">
+        <a
+          href="https://github.com/TsungTang/Earth-Dataset-Odyssey"
+          target="_blank"
+          >2020 Buy it Crash it @ NASA hackathon</a
+        >
+      </div>
     </div>
   </div>
 </template>

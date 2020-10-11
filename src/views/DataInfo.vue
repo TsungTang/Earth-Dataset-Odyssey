@@ -94,7 +94,14 @@
             </div>
             <div class="w-full flex sm:flex-col md:flex-row mb-4">
               <div class="w-72">Citation</div>
-              <div class="px-5 text-2xl font-normal">
+              <div
+                class="px-5 text-2xl font-normal"
+                :class="{
+                  'text-lightgreen': dataDetailInfo.citation.length > 0,
+                  'hover:text-hov-lightgreen':
+                    dataDetailInfo.citation.length > 0,
+                }"
+              >
                 {{ dataDetailInfo.citation.length }}
                 <i
                   @click.stop="showCitationPopup(dataDetailInfo)"
@@ -147,41 +154,7 @@
                 </div>
               </div>
             </div>
-            <!-- 
-            <table class="w-full">
-              <colgroup>
-                <col span="1" class="sm:w-full md:w-1/5" />
-                <col span="1" class="sm:w-0 md:w-4/5" />
-              </colgroup>
 
-
-              <tr class="">
-                <td>URL</td>
-                <td class="text-2xl font-normal">
-                  <a
-                    class="border rounded-lg p-2"
-                    :href="dataDoc + dataDetailInfo.id + '.html'"
-                    target="_blank"
-                    >{{ dataDoc + dataDetailInfo.id + ".html" }}</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Totla of Votes</td>
-                <td class="flex mt-3 text-2xl h-full font-normal">
-                  <div class="mr-8">
-                    <span class="text-lightgreen mr-2">4</span>Researches
-                  </div>
-                  <div class="mr-8">
-                    <span class="text-lightgreen mr-2">10</span>Analysis
-                  </div>
-                  <div class="mr-8">
-                    <span class="text-lightgreen mr-2">10</span>citizen
-                    scientist
-                  </div>
-                </td>
-              </tr>
-            </table> -->
             <footer
               class="flex justify-end mt-12 text-white text-3xl font-normal"
             >

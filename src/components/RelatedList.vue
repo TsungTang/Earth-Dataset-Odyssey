@@ -42,12 +42,12 @@
     </div>
     <div class="main flex flex-col w-full">
       <div
-        class="flex my-10 cursor-pointer p-3 hover:bg-lightgreen2 duration-150 rounded-2rem"
+        class="flex sm:flex-col lg:flex-row w-full mt-6 cursor-pointer p-4 hover:bg-lightgreen2 duration-150 rounded-2rem"
         @click="toDataPage(eachdata.id)"
         v-for="(eachdata, index) in relatedList"
         :key="eachdata.id + '_' + index"
       >
-        <div class="mr-10">
+        <div class="sm:mb-6 lg:mr-10 rounded-1rem">
           <img
             :src="baseImageURL + eachdata.id + '?h=200&w=300'"
             alt=""
