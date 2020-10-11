@@ -54,7 +54,10 @@
           <div class="info-key w-full min-w-30vw text-3xl font-semibold">
             <div class="w-full flex sm:flex-col md:flex-row mb-4">
               <div class="pr-40">Summary</div>
-              <div class="px-5 text-2xl font-normal break-normal text-justify">
+              <div
+                class="px-5 text-2xl font-normal break-all text-justify"
+                style="word-break: break-word"
+              >
                 {{ dataDetailInfo.cmr.summary }}
               </div>
             </div>
