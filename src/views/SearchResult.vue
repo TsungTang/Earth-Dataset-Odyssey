@@ -137,7 +137,7 @@
               </div>
             </div>
             <div class="w-full flex sm:flex-col md:flex-row mb-4">
-              <div class="w-72">Totla of Votes</div>
+              <div class="w-72">Total Votes</div>
               <div class="px-5 text-2xl font-normal flex">
                 <div class="mr-8">
                   <span class="text-lightgreen mr-2">4</span>Researches
@@ -150,84 +150,6 @@
                 </div>
               </div>
             </div>
-            <!-- <table class="w-full">
-              <colgroup>
-                <col span="1" style="width: 20%" />
-                <col span="1" style="width: 80%" />
-              </colgroup>
-              <tr class=" ">
-                <td>Summary</td>
-                <td class="text-2xl font-normal break-normal text-justify">
-                  {{ eachdata.cmr.summary }}
-                </td>
-              </tr>
-              <tr class=" ">
-                <td>Temporal Coverage</td>
-                <td class="text-2xl font-normal">
-                  {{
-                    data_format(eachdata.time_start, true) +
-                    " to " +
-                    data_format(eachdata.time_end, true)
-                  }}
-                </td>
-              </tr>
-              <tr class="leading-12">
-                <td>Data Format</td>
-                <td class="text-2xl font-normal">
-                  {{ eachdata.original_format }}
-                </td>
-              </tr>
-              <tr class="leading-12">
-                <td>Number of Granules</td>
-                <td class="text-2xl font-normal">
-                  {{ eachdata.granule_count }}
-                </td>
-              </tr>
-              <tr class="leading-12">
-                <td>Citation</td>
-                <td
-                  class="text-2xl font-normal"
-                  :class="{
-                    'text-lightgreen': eachdata.citation.length > 0,
-                    'hover:text-hov-lightgreen': eachdata.citation.length > 0,
-                  }"
-                >
-                  {{ eachdata.citation.length }}
-                  <i
-                    @click.stop="showCitationPopup(eachdata)"
-                    v-show="eachdata.citation.length !== 0"
-                    class="fa fa-external-link-square z-10 cursor-pointer"
-                    aria-hidden="true"
-                  ></i>
-                </td>
-              </tr>
-              <tr class="">
-                <td>URL</td>
-                <td class="text-2xl font-normal">
-                  <a
-                    class="border rounded-lg p-2"
-                    :href="dataDoc + eachdata.id + '.html'"
-                    target="_blank"
-                    >{{ dataDoc + eachdata.id + ".html" }}</a
-                  >
-                </td>
-              </tr>
-              <tr class="leading-12">
-                <td>Totla of Votes</td>
-                <td class="flex items-center mt-2 text-2xl font-normal">
-                  <div class="mr-8">
-                    <span class="text-lightgreen mr-2">4</span>Researches
-                  </div>
-                  <div class="mr-8">
-                    <span class="text-lightgreen mr-2">10</span>Analysis
-                  </div>
-                  <div class="mr-8">
-                    <span class="text-lightgreen mr-2">10</span>citizen
-                    scientist
-                  </div>
-                </td>
-              </tr>
-            </table> -->
           </div>
         </div>
       </div>

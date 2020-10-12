@@ -11,7 +11,7 @@
     />
     <div
       v-if="type && type === 'disasterToData'"
-      class="header flex justify-between items-center"
+      class="header flex sm:flex-col-reverse md:flex-row justify-between items-center"
     >
       <a :href="inputObj.url" target="_blank" class="text-24R font-bold">
         Related datasets of
@@ -115,7 +115,7 @@
               </div>
             </div>
             <div class="w-full flex sm:flex-col flex-wrap md:flex-row mb-4">
-              <div class="w-72">Totla of Votes</div>
+              <div class="w-72">Total Votes</div>
               <div class="px-5 text-2xl font-normal flex flex-wrap">
                 <div class="mr-8">
                   <span class="text-lightgreen mr-2">4</span>Researches

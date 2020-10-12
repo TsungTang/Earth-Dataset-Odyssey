@@ -2,7 +2,7 @@
   <div class="main-container w-full min-h-screen">
     <Header v-if="current_route_name !== 'DataInfo'" />
     <router-view></router-view>
-    <Footer class="main-footer sm:hidden md:contents" />
+    <Footer class="main-footer sm:hidden md:block" />
   </div>
 </template>
 
