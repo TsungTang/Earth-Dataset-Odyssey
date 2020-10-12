@@ -3,7 +3,9 @@
     <div
       class="api-card mx-auto mt-6 md:w-3/5 sm:w-full md:px-0 sm:px-4 text-current"
     >
-      <h2 class="api-title text-7xl font-bold mb-4">Open API Document</h2>
+      <h2 class="api-title sm:text-5xl md:text-7xl font-bold mb-4">
+        Open API Document
+      </h2>
       <div class="text-2xl mb-4 text-current font-inter">
         <div>EDO provides open Searching Dataset APIS to all users.</div>
         <div class="mb-4">You can easily use EDO's API service anywhere.</div>

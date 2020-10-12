@@ -1,11 +1,11 @@
 <template>
-  <div class="aboutus-container w-full mb-64">
+  <div class="aboutus-container w-full mb-24">
     <div
       class="api-card mx-auto mt-6 md:w-3/5 sm:w-full md:px-0 sm:px-4 text-current"
     >
-      <h2 class="api-title text-7xl font-bold">About Us</h2>
+      <h2 class="api-title sm:text-5xl md:text-7xl font-bold">About Us</h2>
       <div class="flex flex-wrap">
-        <div class="flex items-center mx-20 my-6">
+        <div class="flex items-center mx-20 sm:my-16 md:my-10">
           <a class="mr-10" :href="github + '/bonzoyang'" target="_blank">
             <img
               class="rounded-full"
@@ -22,7 +22,7 @@
           </div>
         </div>
 
-        <div class="flex items-center mx-20 my-6">
+        <div class="flex items-center mx-20 sm:my-16 md:my-10">
           <a class="mr-10" :href="github + '/s8371112345678'" target="_blank">
             <img
               class="rounded-full"
@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <div class="flex items-center mx-20 my-6">
+        <div class="flex items-center mx-20 sm:my-16 md:my-10">
           <a class="mr-10" :href="github + '/TsungTang'" target="_blank">
             <img
               class="rounded-full"
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="flex items-center mx-20 my-6">
+        <div class="flex items-center mx-20 sm:my-16 md:my-10">
           <a class="mr-10" :href="github + '/sophiejiang'" target="_blank">
             <img
               class="rounded-full"
@@ -70,7 +70,7 @@
           </div>
         </div>
 
-        <div class="flex items-center mx-20 my-6">
+        <div class="flex items-center mx-20 sm:my-16 md:my-10">
           <a class="mr-10" :href="github + '/nondayo'" target="_blank">
             <img
               class="rounded-full"

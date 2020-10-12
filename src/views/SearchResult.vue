@@ -76,7 +76,7 @@
                 class="px-5 text-2xl font-normal break-normal text-justify"
                 style="word-break: break-word"
               >
-                {{ eachdata.cmr.summary }}
+                {{ cutLongSummary(eachdata.cmr.summary) }}
               </div>
             </div>
             <div class="w-full flex sm:flex-col md:flex-row mb-4">
@@ -129,7 +129,7 @@
               <div class="w-72">URL</div>
               <div class="px-5 text-2xl font-normal">
                 <a
-                  class="border rounded-lg p-2"
+                  class="border rounded-lg p-2 break-all"
                   :href="dataDoc + eachdata.id + '.html'"
                   target="_blank"
                   >{{ dataDoc + eachdata.id + ".html" }}</a
@@ -321,6 +321,15 @@ export default {
     closeCitationComp() {
       this.showCitation = false
       this.citationObj = {}
+    },
+    cutLongSummary(summary) {
+      if (summary.length < 300) {
+        return summary
+      } else {
+        const re = /^.{0,300}(?=\W)/
+        const new_summary = re.exec(summary)
+        return `${new_summary} ... `
+      }
     },
   },
 }

@@ -80,7 +80,7 @@
               class="inline mr-4"
             />EDO, empower your search with NLP
           </div>
-          <div class="relative mb-6">
+          <div class="relative w-full mb-6 flex flex-col items-center">
             <span
               @click.stop.prevent="showCalender = !showCalender"
               class="text-2xl font-semibold text-white font-inter leading-10 cursor-pointer"
@@ -93,7 +93,7 @@
               :show-current="false"
               @change="dateCheck"
               v-if="showCalender"
-              class="calender-body min-w-290px absolute z-20 border border-black"
+              class="calender-body mt-10 min-w-290px absolute z-20 border border-black"
               v-model="dates"
               range
             >
@@ -152,31 +152,40 @@
         class="search-container_result relative mb-40 w-full"
       >
         <div
-          class="search-card_result absolute flex flex-col items-center mx-auto py-12 w-4/5 rounded-1rem bg-deepblue"
+          class="search-card_result absolute flex flex-col items-center sm:pt-12 sm:pb-6 md:py-12 w-4/5 rounded-1rem bg-deepblue"
         >
           <div
             class="search-input-card flex items-center bg-white w-4/5 rounded-1rem"
           >
-            <i
-              class="fa fa-search p-4 text-3xl text-gray-900"
-              aria-hidden="true"
-            ></i>
-            <input
-              @keyup.enter="searchDataset"
-              ref="search_input"
-              class="flex-grow py-3 text-3xl font-medium break-words"
-              style="text-wrap: unrestricted"
-              type="text"
-              v-model="searchText"
-              placeholder="Search for Dataset"
-            />
+            <div class="flex">
+              <i
+                class="fa fa-search p-4 text-3xl text-gray-900"
+                aria-hidden="true"
+              ></i>
+              <input
+                @keyup.enter="searchDataset"
+                ref="search_input"
+                class="flex-grow py-3 text-3xl font-medium break-words"
+                style="text-wrap: unrestricted"
+                type="text"
+                v-model="searchText"
+                placeholder="Search for Dataset"
+              />
+            </div>
             <div
-              class="justify-self-end rounded-full mx-6 px-6 py-2 bg-lightgreen text-2xl font-normal font-inter text-white cursor-pointer"
+              class="justify-self-end rounded-full mx-6 px-6 py-2 bg-lightgreen text-2xl font-normal font-inter text-white cursor-pointer sm:hidden md:block"
               aria-hidden="true"
               @click="searchDataset"
             >
               Search
             </div>
+          </div>
+          <div
+            class="rounded-full mx-6 mt-4 px-6 py-2 bg-lightgreen text-2xl font-normal font-inter text-white cursor-pointer sm:block md:hidden"
+            aria-hidden="true"
+            @click="searchDataset"
+          >
+            Search
           </div>
         </div>
       </div>
@@ -293,7 +302,6 @@ export default {
 <style lang="scss">
 @import url("../assets/styles/_base.css");
 @import url("../assets/styles/_input.css");
-
 ::v-deep .calender-body .v-picker {
   color: black;
   position: absolute;
@@ -317,20 +325,10 @@ export default {
 //   bottom: 10%;
 //   transform: translateX(-50%);
 // }
-// .search-card_result {
-//   left: 50%;
-//   transform: translateX(-50%) translateY(-30%);
-// }
-// @media (min-height: 1000px) {
-//   .search-card {
-//     left: 50%;
-//     bottom: 20%;
-//     transform: translateX(-50%);
-//   }
-//   .search-container {
-//     height: 12rem;
-//   }
-// }
+.search-card_result {
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+}
 
 .search-text {
   resize: none;
